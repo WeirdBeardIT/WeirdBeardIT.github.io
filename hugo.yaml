@@ -48,7 +48,7 @@ markup:
 params:
   author: Nusser Studios
   authorimage: ../assets/images/global/author.webp
-  og_image: "images/pages/rocket_WeirdBeardIT.jpg"
+  og_image: /images/rocket_WeirdBeardIT.jpg
   moto: "Lorem ipsum dolor sit amet"
   description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
   disable_theme_toggle: false
