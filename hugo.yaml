@@ -1,5 +1,5 @@
 baseURL: ''
-title: TailBliss
+title: Weird Beard IT
 languageCode: en-us
 DefaultContentLanguage: en
 enableEmoji: true
@@ -48,9 +48,9 @@ markup:
 params:
   author: Nusser Studios
   authorimage: ../assets/images/global/author.webp
-  og_image: /images/tailbliss-cover.png
-  moto: "Super Fast, and Flexible"
-  description: "A Hugo theme built with love, using TailwindCSS 3, Alpine.JS, and Hugo Pipes. Images are optimized for use with Hugo Pipes for WebP format."
+  og_image: images/pages/rocket_WeirdBeardIT.jpg
+  moto: "Lorem ipsum dolor sit amet"
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
   disable_theme_toggle: false
   disable_stay_uptodate: false
 
