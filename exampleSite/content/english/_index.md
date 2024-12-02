@@ -54,7 +54,7 @@ features:
   - title: "Our Partners"
     content: "We're proud to partner with industry leaders and innovators."
     logos:
-      - "/images/logo-1.png"
+      - "/images/logo.png"
       - "/images/logo-2.png"
       - "/images/logo-3.png"
       - "/images/logo-4.png"
