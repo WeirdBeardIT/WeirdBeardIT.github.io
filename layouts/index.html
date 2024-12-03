@@ -17,23 +17,44 @@
           <h2 class="mb-4">{{ .title | markdownify }}</h2>
           <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
-          <!-- Directly adding partner logos here -->
-          <div class="partner-logos-wrapper">
-            <ul class="social-icons">
-              <li><img src="/images/coca.png" alt="Partner logo 1"></li>
-              <li><img src="/images/coca.png" alt="Partner logo 2"></li>
-              <li><img src="/images/coca.png" alt="Partner logo 3"></li>
-              <li><img src="/images/coca.png" alt="Partner logo 4"></li>
+          {{ if .bulletpoints }}
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
             </ul>
-          </div>
-          <!-- End of partner logos -->
-
+            {{ with .button }}
+              {{ if .enable }}
+                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">{{ .label }}<i class="fa fa-arrow-right pl-2"></i></a>
+              {{ end }}
+            {{ end }}
+          {{ end }}
         </div>
       </div>
     </div>
   </section>
 {{ end }}
 <!-- /Features -->
+
+<!-- Partner Logos Section (placed at the end) -->
+<section class="section-sm bg-theme-light dark:bg-darkmode-theme-light partner-logos-wrapper">
+  <div class="container">
+    <h2 class="mb-4 text-center">Our Partners</h2>
+    <p class="mb-8 text-center">We’re proud to partner with industry leaders and innovators.</p>
+    <div class="row items-center justify-center">
+      <ul class="social-icons">
+        <li><img src="/exampleSite/assets/images/coca.png" alt="Partner logo 1"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 2"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 3"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 4"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- /Partner Logos Section -->
 
   <!-- Testimonials -->
 
