@@ -17,29 +17,17 @@
           <h2 class="mb-4">{{ .title | markdownify }}</h2>
           <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
-          {{ if .logos }}
-            <div class="partner-logos-wrapper">
-              <ul class="social-icons">
-                {{ range .logos }}
-                  <li><img src="{{ . }}" alt="Partner logo"></li>
-                {{ end }}
-              </ul>
-            </div>
-          {{ else }}
-            <ul>
-              {{ range .bulletpoints }}
-                <li class="relative mb-4 pl-6">
-                  <i class="fa fa-check absolute left-0 top-1.5"></i>
-                  {{ . | markdownify }}
-                </li>
-              {{ end }}
+          <!-- Directly adding partner logos here -->
+          <div class="partner-logos-wrapper">
+            <ul class="social-icons">
+              <li><img src="/images/coca.png" alt="Partner logo 1"></li>
+              <li><img src="/images/coca.png" alt="Partner logo 2"></li>
+              <li><img src="/images/coca.png" alt="Partner logo 3"></li>
+              <li><img src="/images/coca.png" alt="Partner logo 4"></li>
             </ul>
-            {{ with .button }}
-              {{ if .enable }}
-                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">{{ .label }}<i class="fa fa-arrow-right pl-2"></i></a>
-              {{ end }}
-            {{ end }}
-          {{ end }}
+          </div>
+          <!-- End of partner logos -->
+
         </div>
       </div>
     </div>
