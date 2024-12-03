@@ -20,7 +20,7 @@
           {{ if .logos }}
             <div class="flex justify-center items-center gap-6">
               {{ range .logos }}
-                <img src="{{ . }}" alt="Partner logo" class="logo-img">
+                <img src="{{ . }}" alt="Partner logo" class="social-icon"> <!-- Using the same CSS class -->
               {{ end }}
             </div>
           {{ else }}
