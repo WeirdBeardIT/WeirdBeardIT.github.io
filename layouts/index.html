@@ -18,19 +18,10 @@
           <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
           {{ if .logos }}
-            <!-- Replace this part with the social media icons -->
-            <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:mt-0 lg:text-right">
+            <div class="partner-logos-wrapper">
               <ul class="social-icons">
-                {{ range site.Data.social.main }}
-                  <li>
-                    <a
-                      target="_blank"
-                      aria-label="{{ .name }}"
-                      rel="nofollow noopener"
-                      href="{{ .link | safeURL }}">
-                      <i class="{{ .icon }}"></i>
-                    </a>
-                  </li>
+                {{ range .logos }}
+                  <li><img src="{{ . }}" alt="Partner logo"></li>
                 {{ end }}
               </ul>
             </div>
