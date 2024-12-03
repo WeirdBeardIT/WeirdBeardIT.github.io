@@ -1,14 +1,6 @@
 // Add your own custom styles here
 
-.logo-img {
-  max-height: 60px; /* Adjust as needed */
-  display: block;
-  margin: 0 auto;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem; /* Adjust spacing as needed */
+.partner-logos-wrapper {
+  width: 100%; /* Ensure it takes the full width */ 
+  text-align: center; /* Center the content */ 
 }
