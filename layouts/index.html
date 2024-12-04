@@ -49,15 +49,17 @@
           <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
           {{ if .logos }}
-            <div class="partner-logos-wrapper text-center">
-              <div class="row items-center justify-center">
-                <ul class="social-icons">
-                  {{ range .logos }}
-                    <li><img src="{{ . }}" alt="Partner logo" class="logo-img"></li>
-                  {{ end }}
-                </ul>
+            <section class="section-sm bg-theme-light dark:bg-darkmode-theme-light partner-logos-wrapper">
+              <div class="container">
+                <div class="row items-center justify-center">
+                  <ul class="social-icons">
+                    {{ range .logos }}
+                      <li><img src="{{ . }}" alt="Partner logo"></li>
+                    {{ end }}
+                  </ul>
+                </div>
               </div>
-            </div>
+            </section>
           {{ else }}
             <ul>
               {{ range .bulletpoints }}
