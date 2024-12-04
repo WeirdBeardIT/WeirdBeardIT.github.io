@@ -51,7 +51,11 @@
           {{ if .logos }}
             <section class="section-sm bg-theme-light dark:bg-darkmode-theme-light partner-logos-wrapper">
               <div class="container">
-                <div class="row items-center justify-center">
+                <div class="row justify-center">
+                  <div class="lg:col-7 md:col-9 mb-8 text-center">
+                    <h2 class="mb-4">Our Partners</h2>
+                    <p class="mb-8">We’re proud to partner with industry leaders and innovators.</p>
+                  </div>
                   <ul class="social-icons">
                     {{ range .logos }}
                       <li><img src="{{ . }}" alt="Partner logo"></li>
