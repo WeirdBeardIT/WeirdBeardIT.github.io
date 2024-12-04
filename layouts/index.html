@@ -49,9 +49,7 @@
           <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
           {{ if .logos }}
-            <div class="text-center">
-              <h2 class="mb-4">Our Partners</h2>
-              <p class="mb-8">We’re proud to partner with industry leaders and innovators.</p>
+            <div class="partner-logos-wrapper">
               <div class="flex justify-center items-center gap-6">
                 {{ range .logos }}
                   <img src="{{ . }}" alt="Partner logo" class="logo-img">
