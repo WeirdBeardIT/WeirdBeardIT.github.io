@@ -5,3 +5,17 @@
   text-align: center; /* Center the content */
   padding: 1rem 0; /* Add padding to the section */
 }
+
+// social icons
+.social-icons {
+  @apply space-x-4;
+  li {
+    @apply inline-block;
+    a {
+      @apply flex items-center justify-center text-center leading-9 text-white; // Remove bg and rounded
+      svg {
+        @apply h-5 w-5;
+      }
+    }
+  }
+}
