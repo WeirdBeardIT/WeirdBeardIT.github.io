@@ -34,54 +34,61 @@
   {{ end }}
   <!-- /Banner -->
 
-  <!-- Features -->
-  {{ range $i, $e := .Params.features }}
-    <section class="section-sm {{ if eq $i 0 }}bg-theme-light dark:bg-darkmode-theme-light{{ else if modBool $i 2 }}bg-theme-light dark:bg-darkmode-theme-light{{ end }}">
-      <div class="container">
-        <div class="row items-center justify-between">
-          {{ if .image }}
-            <div class="mb:md-0 {{ if not (modBool $i 2) }}md:order-2{{ end }} md:col-5 mb-6">
-              {{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
-            </div>
-          {{ end }}
-          <div class="{{ if not (modBool $i 2) }}md:order-1{{ end }} md:col-7 lg:col-6">
-            <h2 class="mb-4">{{ .title | markdownify }}</h2>
-            <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
+<!-- Features -->
+{{ range $i, $e := .Params.features }}
+  <section class="section-sm {{ if eq $i 0 }}bg-theme-light dark:bg-darkmode-theme-light{{ else if modBool $i 2 }}bg-theme-light dark:bg-darkmode-theme-light{{ end }}">
+    <div class="container">
+      <div class="row items-center justify-between">
+        {{ if .image }}
+          <div class="mb:md-0 {{ if not (modBool $i 2) }}md:order-2{{ end }} md:col-5 mb-6">
+            {{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+          </div>
+        {{ end }}
+        <div class="{{ if not (modBool $i 2) }}md:order-1{{ end }} md:col-7 lg:col-6">
+          <h2 class="mb-4">{{ .title | markdownify }}</h2>
+          <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
-            {{ if .logos }}
-     <section class="section pt-14">
-      <div class="container">
-        <div class="row justify-center">
-          <div class="lg:col-7 md:col-9 mb-8 text-center">
-                <ul class="social-icons">
-                  {{ range .logos }}
-                    <li><img src="{{ . }}" alt="Partner logo" class="logo-img"></li>
-                  {{ end }}
-                </ul>
-              </div>
-                </div>
-                </div>
-            {{ else }}
-              <ul>
-                {{ range .bulletpoints }}
-                  <li class="relative mb-4 pl-6">
-                    <i class="fa fa-check absolute left-0 top-1.5"></i>
-                    {{ . | markdownify }}
-                  </li>
-                {{ end }}
-              </ul>
-              {{ with .button }}
-                {{ if .enable }}
-                  <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">{{ .label }}<i class="fa fa-arrow-right pl-2"></i></a>
-                {{ end }}
+          {{ if .bulletpoints }}
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">{{ .label }}<i class="fa fa-arrow-right pl-2"></i></a>
               {{ end }}
             {{ end }}
-          </div>
+          {{ end }}
         </div>
       </div>
-    </section>
-  {{ end }}
-  <!-- /Features -->
+    </div>
+  </section>
+{{ end }}
+<!-- /Features -->
+
+<!-- Partner Logos Section (placed at the end) -->
+<section class="section-sm bg-theme-light dark:bg-darkmode-theme-light partner-logos-wrapper">
+  <div class="container">
+    <h2 class="mb-4 text-center">Our Partners</h2>
+    <p class="mb-8 text-center">We’re proud to partner with industry leaders and innovators.</p>
+    <div class="row items-center justify-center">
+      <ul class="social-icons">
+        <li><img src="/images/coca.png" alt="Partner logo 1"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 2"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 3"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 4"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 5"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 6"></li>
+        <li><img src="/images/coca.png" alt="Partner logo 7"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- /Partner Logos Section -->
 
   <!-- Testimonials -->
 
