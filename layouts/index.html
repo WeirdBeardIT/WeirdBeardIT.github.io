@@ -49,18 +49,16 @@
           <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
           {{ if .logos }}
-            <section class="section-sm bg-theme-light dark:bg-darkmode-theme-light partner-logos-wrapper">
+            <section class="section pt-14">
               <div class="container">
                 <div class="row justify-center">
                   <div class="lg:col-7 md:col-9 mb-8 text-center">
-                    <h2 class="mb-4">Our Partners</h2>
-                    <p class="mb-8">We’re proud to partner with industry leaders and innovators.</p>
+                    <ul class="social-icons">
+                      {{ range .logos }}
+                        <li><img src="{{ . }}" alt="Partner logo"></li>
+                      {{ end }}
+                    </ul>
                   </div>
-                  <ul class="social-icons">
-                    {{ range .logos }}
-                      <li><img src="{{ . }}" alt="Partner logo"></li>
-                    {{ end }}
-                  </ul>
                 </div>
               </div>
             </section>
