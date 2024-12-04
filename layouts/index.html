@@ -49,6 +49,8 @@
             <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
             {{ if .logos }}
+              <div class="container">
+              <div class="row items-center py-10">
               <div class="partner-logos-wrapper">
                 <ul class="social-icons">
                   {{ range .logos }}
@@ -56,6 +58,8 @@
                   {{ end }}
                 </ul>
               </div>
+                </div>
+                </div>
             {{ else }}
               <ul>
                 {{ range .bulletpoints }}
