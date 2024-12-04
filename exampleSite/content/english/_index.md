@@ -50,12 +50,4 @@ features:
       enable: false
       label: ""
       link: ""
-
-  - title: "Our Partners"
-    content: "We’re proud to partner with industry leaders and innovators."
-    logos:
-      - "/images/coca.png"
-      - "/images/coca.png"
-      - "/images/coca.png"
-      - "/images/coca.png"
 ---
