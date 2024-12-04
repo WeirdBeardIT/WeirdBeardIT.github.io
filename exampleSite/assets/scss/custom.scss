@@ -14,16 +14,16 @@
     a {
       @apply flex items-center justify-center text-center leading-9 text-darkmode-light; // Use dark mode text color for both modes
       transition: color 0.3s; // Smooth transition for color change
-      svg, i {
+      svg {
         width: 20px; // Adjust size as needed
         height: 20px; // Adjust size as needed
-        font-size: 20px; // For FontAwesome icons
       }
       &:hover {
-        color: #FF4500; // Change this to your desired hover color
+        color: #FFFFFF; // Change this to your desired hover color
       }
     }
   }
 }
+
 
 
