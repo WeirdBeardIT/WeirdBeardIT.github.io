@@ -39,7 +39,7 @@
                 aria-label="{{ .name }}"
                 rel="nofollow noopener"
                 href="{{ .link | safeURL }}">
-                <i class="{{ .icon }}"></i>
+                {{ .icon | safeHTML }}
               </a>
             </li>
           {{ end }}
