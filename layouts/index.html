@@ -48,7 +48,17 @@
           <h2 class="mb-4">{{ .title | markdownify }}</h2>
           <p class="mb-8 text-lg">{{ .content | markdownify }}</p>
 
-          {{ if .bulletpoints }}
+          {{ if .logos }}
+            <div class="text-center">
+              <h2 class="mb-4">Our Partners</h2>
+              <p class="mb-8">We’re proud to partner with industry leaders and innovators.</p>
+              <div class="flex justify-center items-center gap-6">
+                {{ range .logos }}
+                  <img src="{{ . }}" alt="Partner logo" class="logo-img">
+                {{ end }}
+              </div>
+            </div>
+          {{ else }}
             <ul>
               {{ range .bulletpoints }}
                 <li class="relative mb-4 pl-6">
@@ -69,26 +79,6 @@
   </section>
 {{ end }}
 <!-- /Features -->
-
-<!-- Partner Logos Section (placed at the end) -->
-<section class="section-sm bg-theme-light dark:bg-darkmode-theme-light partner-logos-wrapper">
-  <div class="container">
-    <h2 class="mb-4 text-center">Our Partners</h2>
-    <p class="mb-8 text-center">We’re proud to partner with industry leaders and innovators.</p>
-    <div class="row items-center justify-center">
-      <ul class="social-icons">
-        <li><img src="./exampleSite/assets/images/coca.png" alt="Partner logo 1"></li>
-        <li><img src="/assets/images/coca.png" alt="Partner logo 2"></li>
-        <li><img src="assets/images/coca.png" alt="Partner logo 3"></li>
-        <li><img src="../assets/images/coca.png" alt="Partner logo 4"></li>
-        <li><img src="./images/coca.png" alt="Partner logo 5"></li>
-        <li><img src="images/coca.png" alt="Partner logo 6"></li>
-        <li><img src="/images/coca.png" alt="Partner logo 7"></li>
-      </ul>
-    </div>
-  </div>
-</section>
-<!-- /Partner Logos Section -->
 
   <!-- Testimonials -->
 
