@@ -14,7 +14,7 @@
     a {
       @apply flex items-center justify-center text-center leading-9 text-darkmode-light; // Use dark mode text color for both modes
       svg {
-        @apply h-7 w-7; // Adjust size as needed
+        @apply h-10 w-10; // Adjust size as needed
       }
     }
   }
