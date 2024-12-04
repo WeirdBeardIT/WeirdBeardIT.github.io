@@ -14,11 +14,11 @@
     a {
       @apply flex items-center justify-center text-center leading-9 text-darkmode-light; // Use dark mode text color for both modes
       svg {
-        width: 40px; /* Adjust size as needed */
-        height: 40px; /* Adjust size as needed */
+        width: 25px; /* Adjust size as needed */
+        height: 25px; /* Adjust size as needed */
       }
       i {
-        font-size: 40px; /* Adjust font size for FontAwesome icons */
+        font-size: 25px; /* Adjust font size for FontAwesome icons */
       }
     }
   }
