@@ -12,9 +12,9 @@
   li {
     @apply inline-block;
     a {
-      @apply flex items-center justify-center text-center leading-9 text-white; // Remove bg and rounded
+      @apply flex items-center justify-center text-center leading-9 text-darkmode-light; // Use dark mode text color for both modes
       svg {
-        @apply h-5 w-5;
+        @apply h-7 w-7; // Adjust size as needed
       }
     }
   }
