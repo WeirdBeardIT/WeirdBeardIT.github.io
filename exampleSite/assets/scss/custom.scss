@@ -35,14 +35,21 @@
   transition: color 0.3s; // Smooth transition for color change
 }
 
+// Dark header and footer
+
 /* Define the dark-back class for consistent background color in both modes */
 .dark-back {
-  background-color: var(--darkmode-body); /* Use the dark mode background color */
+  background-color: #1a1a1a; /* Replace with the actual dark mode color */
+  color: #ffffff; /* Ensure text color is readable */
 }
 
 /* Ensure hover effects for links */
 .dark-back a:hover {
   color: var(--primary-color); /* Example hover color, adjust as needed */
+}
+
+.dark-back svg {
+  fill: currentColor; /* Ensure SVGs inherit the current color */
 }
 
 .dark-back svg {
