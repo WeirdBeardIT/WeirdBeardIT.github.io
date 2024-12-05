@@ -20,7 +20,7 @@
         fill: currentColor; // Ensure SVGs inherit current color
       }
       &:hover {
-        color: #FF4500; // Change this to your desired hover color
+        color: #FFFFFF; // Change this to your desired hover color
       }
     }
   }
@@ -52,12 +52,10 @@
 }
 
 /* Ensure text and border colors match in both modes */
-.dark-back .text-border,
-.dark-back .dark:text-darkmode-border {
-  color: #1a1a1a; /* Same color for light and dark modes */
+.dark-back .text-border {
+  color: #ffffff; /* Use the same color for text */
 }
 
-.dark-back .border-border,
-.dark-back .dark:border-darkmode-border {
-  border-color: #1a1a1a; /* Same border color for light and dark modes */
+.dark-back .border-border {
+  border-color: #ffffff; /* Use the same border color */
 }
