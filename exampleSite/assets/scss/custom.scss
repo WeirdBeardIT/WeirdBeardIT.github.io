@@ -5,6 +5,7 @@
   text-align: center; /* Center the content */
   padding: 1rem 0; /* Add padding to the section */
 }
+
 // social icons
 .social-icons {
   @apply space-x-4;
@@ -19,8 +20,17 @@
         fill: currentColor; // Ensure SVGs inherit current color
       }
       &:hover {
-        color: #FFFFFF; // Change this to your desired hover color
+        color: #FF4500; // Change this to your desired hover color
       }
     }
   }
+}
+
+/* Add custom styles for the footer "Built with" section */
+.footer-built-with {
+  @apply text-border dark:text-darkmode-border; // Use border color
+}
+.footer-built-with a {
+  @apply hover:text-primary dark:hover:text-darkmode-primary; // Same hover effect as social icons
+  transition: color 0.3s; // Smooth transition for color change
 }
