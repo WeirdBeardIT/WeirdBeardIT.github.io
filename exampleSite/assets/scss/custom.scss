@@ -5,7 +5,6 @@
   text-align: center; /* Center the content */
   padding: 1rem 0; /* Add padding to the section */
 }
-
 // social icons
 .social-icons {
   @apply space-x-4;
@@ -17,13 +16,11 @@
       svg {
         width: 20px; // Adjust size as needed
         height: 20px; // Adjust size as needed
+        fill: currentColor; // Ensure SVGs inherit current color
       }
       &:hover {
-        color: #FFFFFF; // Change this to your desired hover color
+        color: #FF4500; // Change this to your desired hover color
       }
     }
   }
 }
-
-
-
