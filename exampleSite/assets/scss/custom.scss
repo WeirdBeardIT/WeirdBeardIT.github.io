@@ -34,3 +34,17 @@
   @apply hover:text-primary dark:hover:text-darkmode-primary; // Same hover effect as social icons
   transition: color 0.3s; // Smooth transition for color change
 }
+
+/* Define the dark-back class for consistent background color in both modes */
+.dark-back {
+  background-color: var(--darkmode-body); /* Use the dark mode background color */
+}
+
+/* Ensure hover effects for links */
+.dark-back a:hover {
+  color: var(--primary-color); /* Example hover color, adjust as needed */
+}
+
+.dark-back svg {
+  fill: currentColor; /* Ensure SVGs inherit the current color */
+}
