@@ -36,10 +36,20 @@
 }
 
 // Dark header and footer
-/* Define the dark-back class for consistent background color in both modes */
+/* Define the dark-back class for consistent background color, text, and border colors in both modes */
 .dark-back {
-  background-color: #1a1a1a; /* Use dark mode background color */
+  background-color: #1a1a1a; /* Use the dark mode background color */
   color: #ffffff; /* Ensure text color is readable */
+}
+
+.dark-back .text-border,
+.dark-back .dark:text-darkmode-border {
+  color: #ffffff; /* Same color for text in both modes */
+}
+
+.dark-back .border-border,
+.dark-back .dark:border-darkmode-border {
+  border-color: #ffffff; /* Same border color for both modes */
 }
 
 /* Ensure hover effects for links */
@@ -49,13 +59,4 @@
 
 .dark-back svg {
   fill: currentColor; /* Ensure SVGs inherit the current color */
-}
-
-/* Ensure text and border colors match in both modes */
-.dark-back .text-border {
-  color: #ffffff; /* Use the same color for text */
-}
-
-.dark-back .border-border {
-  border-color: #ffffff; /* Use the same border color */
 }
