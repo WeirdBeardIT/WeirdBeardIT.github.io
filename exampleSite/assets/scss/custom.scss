@@ -36,36 +36,26 @@
 }
 
 // Dark header and footer
-/* Define the dark-back class for consistent background color, text, and border colors in both modes */
-.footer.dark-back,
-.header.dark-back {
-  background-color: #1a1a1a !important; /* Use the dark mode background color */
-  color: #ffffff !important; /* Ensure text color is readable */
+/* Define the dark-back class for consistent background color, text, and border colors */
+.dark-back {
+  background-color: #1a1a1a; /* Use the dark mode background color */
+  color: #ffffff; /* Ensure text color is readable */
 }
 
-/* Ensure text and border colors match in both modes */
-.footer.dark-back .text-border,
-.footer.dark-back .dark:text-darkmode-border,
-.header.dark-back .text-border,
-.header.dark-back .dark:text-darkmode-border {
-  color: #ffffff !important; /* Same color for text in both modes */
+/* Ensure text and border colors match */
+.dark-back .text-border {
+  color: #ffffff; /* Use the same color for text */
 }
 
-.footer.dark-back .border-border,
-.footer.dark-back .dark:border-darkmode-border,
-.header.dark-back .border-border,
-.header.dark-back .dark:border-darkmode-border {
-  border-color: #ffffff !important; /* Same border color for both modes */
+.dark-back .border-border {
+  border-color: #ffffff; /* Use the same border color */
 }
 
 /* Ensure hover effects for links */
-.footer.dark-back a:hover,
-.header.dark-back a:hover {
-  color: var(--primary-color) !important; /* Example hover color, adjust as needed */
+.dark-back a:hover {
+  color: var(--primary-color); /* Example hover color, adjust as needed */
 }
 
-.footer.dark-back svg,
-.header.dark-back svg {
-  fill: currentColor !important; /* Ensure SVGs inherit the current color */
+.dark-back svg {
+  fill: currentColor; /* Ensure SVGs inherit the current color */
 }
-
