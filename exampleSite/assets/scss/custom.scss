@@ -59,3 +59,11 @@
 .dark-back svg {
   fill: currentColor; /* Ensure SVGs inherit the current color */
 }
+
+// Adding rounded corners to images within the Features section
+.section-sm img,
+.md\:col-5 img,
+.features-section img {
+    border-radius: 15px; // Adjust the value as needed
+    overflow: hidden;
+}
