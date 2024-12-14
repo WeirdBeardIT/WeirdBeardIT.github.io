@@ -67,3 +67,15 @@
     border-radius: 25px; // Adjust the value as needed
     overflow: hidden;
 }
+
+// Default link styles
+a {
+    color: #007bff; // Change to your preferred link color
+    text-decoration: none; // Remove default underline
+}
+
+// Hover effect for links
+a:hover {
+    color: #0056b3; // Change to your preferred hover color
+    text-decoration: underline; // Optionally add an underline or other effect
+}
