@@ -12,7 +12,7 @@ banner:
 # Features
 features:
   - title: "What's Included in Hugoplate"
-    image: "/images/service-1.png"
+    image: "/images/rocket_WeirdBeardIT.png"
     content: "Hugoplate is a comprehensive starter template that includes everything you need to get started with your Hugo project. What's Included in Hugoplate"
     bulletpoints:
       - "10+ Pre-build pages"
@@ -27,7 +27,7 @@ features:
       link: "#"
 
   - title: "Discover the Key Features Of Hugo"
-    image: "/images/service-2.png"
+    image: "/images/solutions_WeirdBeardIT.png"
     content: "Hugo is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
     bulletpoints:
       - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
@@ -39,7 +39,7 @@ features:
       link: "https://github.com/zeon-studio/hugoplate"
 
   - title: "The Top Reasons to Choose Hugo for Your Hugo Project"
-    image: "/images/service-3.png"
+    image: "/images/security_WeirdBeardIT.png"
     content: "With Hugo, you can build modern and content-focused websites without sacrificing performance or ease of use."
     bulletpoints:
       - "Instantly load static sites for better user experience and SEO."
