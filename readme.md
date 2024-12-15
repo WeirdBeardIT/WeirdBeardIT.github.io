@@ -7,7 +7,7 @@ Under Construction
 </p>
 
 <p align="center">
-<b>Hacked theme</b>: <a href="https://github.com/zeon-studio/hugoplate" target="_blank">Hugoplate</a>
+<b>Hacked theme based on</b>: <a href="https://github.com/zeon-studio/hugoplate" target="_blank">Hugoplate</a>
 </p>
 
 <p align="center">
