@@ -17,7 +17,7 @@ en: &DEFAULT_EN
     buttonlink: "#services"
 
 # services:
-    title: "Services"
+  # title: "Services"
     text: "Lorem ipsum"
     section: services
     list:
@@ -31,14 +31,14 @@ en: &DEFAULT_EN
         desc: "Your description here, full **Markdown** support"
         icon: fab fa-markdown
 
-  portfolio:
-    title: "Portfolio"
+# portfolio:
+  # title: "Portfolio"
     text: "Lorem ipsum dolor sit amet consectetur."
     section: portfolio
     closebutton: "Close Project"
 
-  timeline:
-    title: "Timeline"
+# timeline:
+  # title: "Timeline"
     text: "Lorem ipsum timeline"
     section: timeline
     # left is the default
@@ -68,8 +68,8 @@ en: &DEFAULT_EN
         align: right
     end: "Be Part <br> of Our <br> Story!"
 
-  about:
-    title: "About Us"
+# about:
+  # title: "About Us"
     text: "our story"
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
     section: about
@@ -92,8 +92,8 @@ en: &DEFAULT_EN
         url: https://github.com/raviriley/agency-jekyll-theme
         logo: assets/img/clients/creative-market.jpg
 
-  team:
-    title: "OUR AMAZING TEAM"
+# team:
+  # title: "OUR AMAZING TEAM"
     text: "Lorem ipsum dolor sit amet consectetur."
     subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
     section: team
@@ -129,8 +129,8 @@ en: &DEFAULT_EN
           - url: https://linkedin.com
             icon: fab fa-linkedin-in
 
-  contact:
-    title: "Contact Us"
+# contact:
+  # title: "Contact Us"
     text: "Lorem ipsum or call 123456789"
     section: contact
     name: "Name*"
@@ -144,7 +144,7 @@ en: &DEFAULT_EN
     subject: "Contact Form Submission"
     submit: "Send Message"
 
-  footer:
+# footer:
     legal: "Privacy Policy"
     social:
       - url: https://twitter.com
