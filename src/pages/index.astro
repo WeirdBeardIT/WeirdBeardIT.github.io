@@ -1,137 +1,85 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Button from '~/components/ui/Button.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import CookieBanner from '~/components/CookieBanner.astro';
+import Portfolio from '~/components/Portfolio.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Weird Beard IT - Dead Good Microsoft SharePoint Solutions',
   ignoreTitleTemplate: true,
 };
 ---
-
 <Layout metadata={metadata}>
+
   <!-- Hero Widget ******************* -->
 
   <Hero
+  tagline="New for Sep25 - The Beard Strikes Back"
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Let\'s Talk',
+        icon: 'tabler:message-dots',
+        href: '#contact',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Learn more', icon: 'tabler:circle-arrow-down', href: '#solutions' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/WEIRD-BEARD-IT.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      <span class="text-accent dark:text-white">Dead Good SharePoint Solutions</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
+   <!-- HIDDEN  <span class="hidden sm:inline"> -->
+        <span>We supercharge SharePoint with a no‑nonsense consulting approach that delivers creative, simple solutions to boost productivity and transform collaboration. Ready to take your SharePoint to the next level?</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
     </Fragment>
   </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
 
   <!-- Content Widget **************** -->
 
   <Content
+    id="solutions"
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="SOLUTIONS"
+    title="Level Up Your SharePoint"
+    subtitle="A focused suite of SharePoint solutions that turn complex business needs into easy‑to‑use platforms."
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Centralised Communication',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Company news, updates and announcements in one place, enhanced with Microsoft 365 tools like Viva Connections.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Tailored Design & Structure',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Built around your workflows, branding and organisational goals.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Information Accessibility',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Easy navigation and search to quickly find the resources and updates that matter.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: '~/assets/images/WEIRD-BEARD-IT-int.jpg',
       alt: 'Colorful Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Intranet Hub</h3>
+      Comprehensive development of a customised intranet solution tailored to your organisation’s needs, enhancing internal communication and collaboration.
     </Fragment>
 
     <Fragment slot="bg">
@@ -145,31 +93,35 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Custom‑Branded Experience',
+        description: `Tailored to reflect your organisation’s identity and client needs.`,
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Direct Communication Channels',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'Central space for messages, updates and project discussions.',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Effortless File Sharing',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          "Easy, permission‑controlled access to documents and resources.",
       },
-      {
-        title: 'Integration of media',
+            {
+        title: 'See How It Works',
+        icon: 'tabler:brand-youtube-filled',
         description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+          '<a href="https://youtu.be/0sw9PSBu5EI" target="_blank" class="text-primary no-underline hover:underline inline-flex items-center gap-1">Demo: youtu.be/0sw9PSBu5EI</a>',
       },
-    ]}
+          ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: '~/assets/images/WEIRD-BEARD-IT-cli.jpg',
+      alt: 'Client Portal',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Client Portal</h3>
+      Development of a secure, branded portal that streamlines communication, document sharing and collaboration with clients.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -183,127 +135,404 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'Designed Around Your Team',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'Tailored layouts, tools and content to match each team’s unique needs.',
       },
       {
-        title: 'Continuous improvement',
+        title: 'Process Optimisation',
         description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+          'Centralised access to workflows, forms and resources for faster task completion.',
       },
       {
-        title: 'Time and resource efficiency',
+        title: 'Improved Visibility',
         description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+          'Clear oversight of departmental activities, priorities and performance metrics.',
       },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
+      ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: '~/assets/images/WEIRD-BEARD-IT-dep.jpg',
       alt: 'Astronauts Image',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+     <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Department Portal</h3>
+      Creation of specialised SharePoint portals for individual departments, streamlining processes and improving operational efficiency.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+    <!-- Content Widget **************** -->
 
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+  <Content
+    isAfterContent
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+        title: 'Structured Organisation',
+        description: `Logical folder structures and metadata for quick, accurate document retrieval.`,
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Version Control',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Track changes and maintain a clear history of document updates.',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Integrated Copilot Agents',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
+          "AI‑powered search and guidance to quickly locate, summarise and manage documents.",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/WEIRD-BEARD-IT-doc.jpg',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Document Management</h3>
+      Implementation of a robust SharePoint‑based system to organise, store and manage documents efficiently across the organisation.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+<!-- EDIT: PORTFOLIO *************** -->
+
+<Portfolio
+  id="showcase-solutions"
+  tagline="SOLUTIONS"
+  title="SharePoint Unleashed"
+  subtitle="From dynamic design to powerful automation, we transform SharePoint into a platform that feels alive - because your digital workplace should inspire, not expire."
+  items={[
+    {
+      title: 'Your Launchpad',
+      image: '/images/portfolio/WEIRD-BEARD-IT-sp1.png',
+    },
+    {
+      title: 'Goodbye Spreadsheets',
+      image: '/images/portfolio/WEIRD-BEARD-IT-sp2.png',
+    },
+    {
+      title: 'Organised By Design',
+      image: '/images/portfolio/WEIRD-BEARD-IT-sp3.png',
+    },
+  ]}
+/>
+
+   <!-- Features Widget *************** -->
+
+  <Features
+    id="more-solutions"
+    tagline="SOLUTIONS"
+    title="Explore More SharePoint Wonders"
+    items={[
+      {
+        title: 'Knowledge Base & Self‑Service Portals',
+        description:
+          'Centralised, searchable hubs that give staff instant access to policies, guides and resources - reducing support requests and saving time.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Project & Task Management Hub ',
+        description:
+          'SharePoint‑powered workspace for planning, assigning and tracking projects, keeping teams aligned and deadlines on track.',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Excel Amnesty',
+        description:
+          'Replace outdated spreadsheets with dynamic SharePoint Lists for cleaner data, easier collaboration and real‑time updates.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Workflow Automation & Approvals',
+        description:
+          'Streamline processes with digital forms and automated approvals, reducing manual effort and speeding up decision‑making.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- Note Widget ******************* -->
+
+<Note
+  title=""
+  description='Looking for more than just SharePoint? We’ve got you covered with our <a href="#ateam" class="text-primary no-underline hover:underline inline-flex items-center gap-1">Trusted Tech Allies <svg xmlns="http://www.w3.org/2000/svg" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-checkbox"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg></a>'
+/>
+
+<!-- ICON HERE -->
+
+<div class="flex items-center justify-center">
+  <!-- Left line -->
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  <img
+    src="/images/WEIRD-BEARD-IT-light-G.png"
+    alt="Divider"
+    class="mx-4 h-15 w-auto"
+    loading="lazy"
+  />
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+</div>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="training"
+    tagline="TRAINING"
+    title="Building Champions, <br>not just Solutions"
+    subtitle="Delivering the solution is just the start - your nominated staff become trained SharePoint Champions, equipped to keep your platform thriving."
+    items={[
+
+// EDIT
+    {
+      type: 'header',
+      title: 'SharePoint Champion Training',
+    },
+// EDIT
+
+      {
+        title: 'Level 1: <span class="font-medium">+100 XP</span>',
+        description:
+          "Join the project from day one, sit in on key meetings and participate in decision‑making to understand how solutions take shape.",
+        icon: 'tabler:flag',
+      },
+      {
+        title: 'Level 2: <span class="font-medium">+250 XP</span>',
+        description:
+          'Step behind the scenes to explore the build - uncovering site structures, settings and configurations that make SharePoint work.',
+        icon: 'tabler:diamond',
+      },
+      {
+        title: 'Level 3: <span class="font-medium">+500 XP</span>',
+        description:
+          'Gain the skills to update, edit and adapt the solution yourself, keeping your SharePoint relevant and effective long after go‑live.',
+        icon: 'tabler:crown',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/WEIRD-BEARD-IT-xp.jpg',
       alt: 'Steps image',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+<!-- ICON HERE -->
 
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+<div class="flex items-center justify-center my-8">
+  <!-- Left line -->
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  <img
+    src="/images/WEIRD-BEARD-IT-light-G.png"
+    alt="Divider"
+    class="mx-4 h-15 w-auto"
+    loading="lazy"
+  />
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+</div>
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    tagline="HELP"
+    id="support"
+    title="SharePoint Support Subs That Have Your Back"
+    subtitle="Remote support subscriptions offer direct access to SharePoint expertise through scheduled Teams meetings, ensuring you’re never on your own. With flexible weekly or monthly plans that keep your platform running smoothly, your team confident and your champions empowered."
+    prices={[
+      {
+        title: 'DEVELOP',
+        subtitle: 'Ongoing Maintenance Support',
+        price: 29,
+        period: 'per month',
+        items: [
+          {
+            description: 'Maintain and optimise your installed SharePoint solutions.',
+          },
+          {
+            description: 'Resolve issues before they disrupt work.',
+          },
+          {
+            description: 'Receive proactive recommendations for improvements.',
+          },
+        ],
+        callToAction: {
+          text: 'Get started',
+          href: '#contact',
+        },
+      },
+      {
+        title: 'DROP-IN',
+        subtitle: 'Onboarding & User Guidance',
+        price: 69,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Guide new and existing users through SharePoint features.',
+          },
+          {
+            description: 'Share tips to boost efficiency and collaboration.',
+          },
+          {
+            description: 'Answer “How‑do‑I” questions in real time.',
+          },
+        ],
+        callToAction: {
+          text: 'Get started',
+          href: '#contact',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'CHAMPION',
+        subtitle: 'SharePoint Champion Support',
+        price: 199,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Provide advanced guidance for your SharePoint Champions.',
+          },
+          {
+            description: 'Support solution evolution and customisation.',
+          },
+          {
+            description: 'Share best practices for company‑wide adoption.',
+          },
+        ],
+        callToAction: {
+          text: 'Get started',
+          href: '#contact',
+        },
+      },
+    ]}
+  />
+
+  <!-- ICON HERE -->
+
+<div class="flex items-center justify-center">
+  <!-- Left line -->
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  <img
+    src="/images/WEIRD-BEARD-IT-light-G.png"
+    alt="Divider"
+    class="mx-4 h-15 w-auto"
+    loading="lazy"
+  />
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+</div>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faq"
+    title="The Burning Questions"
+    tagline="FAQ"
+    classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
+        title: 'Do we need SharePoint already installed?',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          "No. Support is available whether starting from scratch or enhancing an existing setup. For those without SharePoint, guidance is provided on selecting the right plan, setting it up and tailoring it to specific needs.",
       },
       {
-        title: 'Features',
+        title: 'Can you work with our existing SharePoint setup?',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+          "Yes. Existing environments can be audited, customised and optismised without disrupting day‑to‑day operations, whether newly implemented or long‑established.",
       },
       {
-        title: 'Content',
+        title: 'Do you offer training for our team?',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
+          "Yes. Tailored training is available for end‑users, administrators and nominated SharePoint Champions, ensuring teams can confidently use and manage solutions long after go‑live.",
       },
       {
-        title: 'Call-to-Action',
+        title: 'How long does a typical SharePoint project take?',
         description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
+          "Timelines vary depending on scope. Smaller projects may be completed in weeks, while larger, more complex builds can take several months. A clear schedule is provided following the initial discovery session.",
       },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
+            {
+        title: 'Do you offer remote consultancy?',
         description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
+          "Yes. Consultancy is delivered entirely remotely, enabling collaboration with clients anywhere in the world and ensuring flexible, efficient project delivery.",
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'How weird is your beard?',
+        description:
+          "It’s only weird if you stare at it. Otherwise, it’s just quietly plotting a pilot episode of a Netflix series nobody asked for.",
+      },
+    ]}
+  />
+
+  <!-- ICON HERE -->
+
+<div class="flex items-center justify-center">
+  <!-- Left line -->
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  <img
+    src="/images/WEIRD-BEARD-IT-light-G.png"
+    alt="Divider"
+    class="mx-4 h-15 w-auto"
+    loading="lazy"
+  />
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+</div>
+
+<!-- Features2 Widget EDIT: Team ************** -->
+
+<Features2
+  id="team"
+  title="Behind The Beard"
+  tagline="Team"
+  columns={2}
+  items={[
+    {
+      title: 'Anthony',
+      tagline: 'Digital Solutions & SharePoint Specialist',
+      description: 'I’ve spent over two decades helping UK organisations turn tech ideas into real‑world results. From shaping big‑picture strategies to rolling out creative, user‑friendly solutions. I’m all about making technology work smarter for people and businesses. Did I mention I love SharePoint?',
+      image: '/images/WEIRD-BEARD-IT-a1.jpg',
+      socialLinks: [
+        { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/anthonywithah' },
+        { ariaLabel: 'Slack', icon: 'tabler:brand-github', href: 'https://github.com/anthonywithah' },
+      ],
+    },
+    {
+      title: 'Anna',
+      tagline: 'Design & UX Specialist',
+      description: 'I’m a graphic designer with a background in design and animation, which means I know how to make things look good and feel right. I shape the visuals and graphics so the final look and feel lands with a sharp, professional edge.',
+      image: '/images/WEIRD-BEARD-IT-a2.jpg',
+      socialLinks: [
+        { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/annabannabee' },
+        { ariaLabel: 'LinkedIn', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/annabannadoodle' },
+      ],
+    },
+  ]}
+/>
+
+<!-- Features2 Widget ************** -->
+
+  <Features2
+    id="ateam"
+    title="The MS365 A-Team"
+    subtitle="When the project calls for it, we collaborate with our Trusted Tech Allies - a proven network of Microsoft 365 experts to expand your capabilities."
+    tagline="TEAM"
+    items={[
+      {
+        title: 'Azure',
+        description: "Scalable, secure cloud solutions that power your apps, data and infrastructure.",
+        icon: 'tabler:brand-azure',
+      },
+      {
+        title: 'Intune',
+        description:
+          "Seamless device and app management to keep your team productive and your data protected.",
+        icon: 'tabler:arrows-split',
+      },
+      {
+        title: 'PowerBi',
+        description:
+          "Transform raw data into interactive dashboards and insights that drive smarter decisions.",
+        icon: 'tabler:chart-bar-popular',
       },
     ]}
   >
@@ -312,88 +541,81 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
+<!-- ICON HERE -->
 
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
+<div class="flex items-center justify-center">
+  <!-- Left line -->
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  <img
+    src="/images/WEIRD-BEARD-IT-light-G.png"
+    alt="Divider"
+    class="mx-4 h-15 w-auto"
+    loading="lazy"
   />
+  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+</div>  
 
-  <!-- FAQs Widget ******************* -->
+<!-- CONTACT -->
+<ContactUs
+  id="contact"
+  tagline="CONTACT"
+  title="Let’s Talk About Your SharePoint Project"
+  subtitle="Ready to get things moving? Whether it’s a fresh build or the next big upgrade, this is where your SharePoint journey takes off."
+inputs={[
+  { type: 'text', name: 'name', label: 'Name' },
+  { type: 'text', name: 'company', label: 'Company', autocomplete: 'organization' },
+  { type: 'email', name: 'email', label: 'Email' },
+  { type: 'select', name: 'referrer', label: 'How did you hear about us? (optional)', options: [
+      { value: '', label: 'Please select' },
+      { value: 'search', label: 'Search Engine' },
+      { value: 'linkedin', label: 'LinkedIn' },
+      { value: 'friend', label: 'Friend' },
+      { value: 'other', label: 'Other' }
+    ]
+  },
+  { type: 'text', name: 'friendName', label: 'LinkedIn username', class: 'hidden' },
+  { type: 'text', name: 'otherSource', label: 'Please specify', class: 'hidden' }
+]}
+textarea={{ label: 'Message' }}
 
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
+extraInputs={[
+  {
+    type: 'select',
+    name: 'referrer',
+    label: 'How did you hear about us? (optional)',
+    options: [
+      { value: '', label: 'Please select' },
+      { value: 'search', label: 'Search Engine' },
+      { value: 'linkedin', label: 'LinkedIn' },
+      { value: 'friend', label: 'Friend' },
+      { value: 'other', label: 'Other' }
+    ]
+  },
+  {
+    type: 'text',
+    name: 'friendName',
+    label: 'Friend’s Name',
+    class: 'hidden'
+  },
+  {
+    type: 'text',
+    name: 'otherSource',
+    label: 'Please specify',
+    class: 'hidden'
+  }
+]}
 
-  <!-- Stats Widget ****************** -->
+  description="Sit tight - A reply will be with you within 24 business hours or less."
+>
+  <Fragment slot="buttons">
+    <div class="mt-0 mb-8 flex flex-wrap justify-center gap-4">
+      <Button href="https://www.linkedin.com/company/weirdbeardit" target="_blank" variant="primary" icon="tabler:brand-linkedin">Linkedin</Button>
+      <!-- HIDDEN: <Button href="https://" target="_blank" variant="secondary" icon="tabler:brand-slack">Slack</Button> -->
+    </div>
+  </Fragment>
+</ContactUs>
 
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
+<!-- Cookie Banner (fixed position, so it floats at bottom) -->
+<CookieBanner />
 
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
 </Layout>

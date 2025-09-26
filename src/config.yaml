@@ -1,6 +1,6 @@
 site:
-  name: TBC
-  site: 'https://WeirdBeardIT.github.io'
+  name: Weird Beard IT
+  site: 'https://WeirdBeardIT.com'
   base: '/'
   trailingSlash: false
 
@@ -9,23 +9,23 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Weird Beard IT
+    template: '%s — Weird Beard IT'
+  description: "Dead Good SharePoint Solutions"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Weird Beard IT
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
-    cardType: summary_large_image
+ # twitter:
+ #   handle: '@arthelokyo'
+ #   site: '@arthelokyo'
+ #   cardType: summary_large_image
 
 i18n:
   language: en
@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:
@@ -69,4 +69,4 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'dark:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

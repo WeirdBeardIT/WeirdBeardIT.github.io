@@ -2,86 +2,244 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const { 
+  inputs = [], 
+  textarea, 
+  disclaimer, 
+  button = 'Send', 
+  description = '' 
+} = Astro.props;
 ---
 
-<form>
-  {
-    inputs &&
-      inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
-          name && (
-            <div class="mb-6">
-              {label && (
-                <label for={name} class="block text-sm font-medium">
-                  {label}
-                </label>
-              )}
-              <input
-                type={type}
-                name={name}
-                id={name}
-                autocomplete={autocomplete}
-                placeholder={placeholder}
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-              />
-            </div>
-          )
+<form id="contact-form" class="space-y-6">
+
+  <!-- First render the basic inputs (excluding referrer fields) -->
+  {inputs && inputs
+    .filter(input => !['referrer','friendName','otherSource'].includes(input.name))
+    .map(({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', options = [] }) => (
+      name && (
+        <div class="mb-6">
+          {label && <label for={name} class="block text-sm font-medium">{label}</label>}
+          {type === 'select' ? (
+            <select
+              name={name}
+              id={name}
+              class="py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20 bg-transparent text-black dark:text-white dark:bg-[#212121]"
+            >
+              {options.map(opt => (
+                <option value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+          ) : (
+            <input
+              type={type}
+              name={name}
+              id={name}
+              autocomplete={autocomplete}
+              placeholder={placeholder}
+              class="py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20 bg-transparent"
+              required
+            />
+          )}
+        </div>
       )
+    ))
   }
 
-  {
-    textarea && (
-      <div>
-        <label for="textarea" class="block text-sm font-medium">
-          {textarea.label}
-        </label>
-        <textarea
-          id="textarea"
-          name={textarea.name ? textarea.name : 'message'}
-          rows={textarea.rows ? textarea.rows : 4}
-          placeholder={textarea.placeholder}
-          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+  <!-- Then the textarea -->
+  {textarea && (
+    <div>
+      <label for="textarea" class="block text-sm font-medium">
+        {textarea.label}
+      </label>
+      <textarea
+        id="textarea"
+        name={textarea.name ? textarea.name : 'message'}
+        rows={textarea.rows ? textarea.rows : 4}
+        placeholder={textarea.placeholder}
+        class="py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20 bg-transparent"
+        required
+      />
+    </div>
+  )}
+
+  <!-- Now the special referrer fields -->
+  {inputs && inputs
+    .filter(input => ['referrer','friendName','otherSource'].includes(input.name))
+    .map(({ type = 'text', name, label = '', options = [] }) => (
+      <div id={`${name}-field`} class={name === 'referrer' ? '' : 'hidden'}>
+        {label && <label for={name} class="block text-sm font-medium">{label}</label>}
+        {type === 'select' ? (
+          <select
+            name={name}
+            id={name}
+            class="py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20 bg-transparent"
+          >
+            {options.map(opt => (
+              <option value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+        ) : (
+          <input
+            type={type}
+            name={name}
+            id={name}
+            class="py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20 bg-transparent"
+          />
+        )}
+      </div>
+    ))
+  }
+
+  {disclaimer && (
+    <div class="mt-3 flex items-start">
+      <div class="flex mt-0.5">
+        <input
+          id="disclaimer"
+          name="disclaimer"
+          type="checkbox"
+          class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          required
         />
       </div>
-    )
-  }
-
-  {
-    disclaimer && (
-      <div class="mt-3 flex items-start">
-        <div class="flex mt-0.5">
-          <input
-            id="disclaimer"
-            name="disclaimer"
-            type="checkbox"
-            class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-          />
-        </div>
-        <div class="ml-3">
-          <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
-            {disclaimer.label}
-          </label>
-        </div>
+      <div class="ml-3">
+        <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+          {disclaimer.label}
+        </label>
       </div>
-    )
-  }
+    </div>
+  )}
 
-  {
-    button && (
-      <div class="mt-10 grid">
-        <Button variant="primary" type="submit">
-          {button}
-        </Button>
-      </div>
-    )
-  }
+  {button && (
+    <div class="mt-10 grid">
+      <Button variant="primary" type="submit" id="submit-btn">
+        {button}
+      </Button>
+    </div>
+  )}
 
-  {
-    description && (
-      <div class="mt-3 text-center">
-        <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
-      </div>
-    )
-  }
+  {description && (
+    <div class="mt-3 text-center">
+      <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+    </div>
+  )}
 </form>
+
+<style>
+  .spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // === Referrer toggle logic ===
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const referrerSelect = form ? form.querySelector('#referrer') : null;
+    const friendField = form ? form.querySelector('#friendName-field') : null;
+    const otherField = form ? form.querySelector('#otherSource-field') : null;
+
+    const toggleReferrerFields = () => {
+      if (!referrerSelect || !friendField || !otherField) return;
+
+      const friendInput = friendField.querySelector('input');
+      const otherInput = otherField.querySelector('input');
+
+      if (referrerSelect.value === 'friend') {
+        friendField.classList.remove('hidden');
+        otherField.classList.add('hidden');
+        if (friendInput) friendInput.required = true;
+        if (otherInput) otherInput.required = false;
+      } else if (referrerSelect.value === 'other') {
+        otherField.classList.remove('hidden');
+        friendField.classList.add('hidden');
+        if (otherInput) otherInput.required = true;
+        if (friendInput) friendInput.required = false;
+      } else {
+        friendField.classList.add('hidden');
+        otherField.classList.add('hidden');
+        if (friendInput) friendInput.required = false;
+        if (otherInput) otherInput.required = false;
+      }
+    };
+
+    if (referrerSelect) {
+      referrerSelect.addEventListener('change', toggleReferrerFields);
+      toggleReferrerFields(); // run once on load
+    }
+
+    // === Existing form submission logic ===
+    if (!form || !submitBtn) return;
+
+    // No-JS fallback
+    form.setAttribute('action', 'https://formspree.io/f/YOUR_FORM_ID');
+    form.setAttribute('method', 'POST');
+    form.setAttribute('novalidate', 'novalidate');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      submitBtn.innerHTML = `<span class="spinner"></span> Sending...`;
+      submitBtn.setAttribute('disabled', 'true');
+      submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+      const formData = new FormData(form);
+      await new Promise(requestAnimationFrame);
+
+      // === NEW: Override subject for Odoo lead title ===
+      const nameField = form.querySelector('[name="name"]');
+      const name = nameField ? nameField.value : '';
+      formData.append('_subject', `New Website Lead from ${name}`);
+
+      try {
+        const startTime = Date.now();
+        const res = await fetch('https://formspree.io/f/mgvldppe', {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' }
+        });
+
+        const elapsed = Date.now() - startTime;
+        const minDelay = 800;
+        const waitTime = elapsed < minDelay ? minDelay - elapsed : 0;
+
+        if (res.ok) {
+          setTimeout(() => {
+            form.innerHTML = `<p class="text-green-500 font-bold text-center">✅ Thanks! Your message has been sent.</p>`;
+          }, waitTime);
+        } else {
+          setTimeout(() => {
+            submitBtn.innerHTML = `Contact us`;
+            submitBtn.removeAttribute('disabled');
+            submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            form.insertAdjacentHTML(
+              'beforeend',
+              `<p class="text-red-500 mt-4 text-center">❌ Something went wrong. Please try again.</p>`
+            );
+          }, waitTime);
+        }
+      } catch {
+        submitBtn.innerHTML = `Contact us`;
+        submitBtn.removeAttribute('disabled');
+        submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+        form.insertAdjacentHTML(
+          'beforeend',
+          `<p class="text-red-500 mt-4 text-center">❌ Network error. Please try again later.</p>`
+        );
+      }
+    });
+  });
+</script>

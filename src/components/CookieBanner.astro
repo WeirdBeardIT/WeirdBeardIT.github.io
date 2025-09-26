@@ -1,0 +1,40 @@
+<div id="cookie-banner" 
+  class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 
+         bg-white dark:bg-[#212121] 
+         border border-gray-500/20 
+         shadow-lg py-1 px-3 rounded-md text-sm 
+         flex flex-col md:flex-row items-center gap-2 
+         text-gray-800 dark:text-muted hidden">
+  <span>
+    This site runs on essential cookies… and coffee. Mostly cookies: 
+    <a href="/privacy" id="privacy-link" class="underline">Privacy Policy</a>
+  </span>
+  <button
+    id="accept-cookies"
+    class="btn btn-secondary !py-1 !px-3"
+  >
+    OK
+  </button>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const privacyLink = document.getElementById('privacy-link');
+
+  // Show banner if no consent stored
+  if (!localStorage.getItem('cookieConsent')) {
+    banner.classList.remove('hidden');
+  }
+
+  // Accept button click
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'true');
+    banner.classList.add('hidden');
+  });
+
+  // Privacy Policy link click
+  privacyLink.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'true');
+  });
+</script>

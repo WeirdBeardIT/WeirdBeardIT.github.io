@@ -1,0 +1,13 @@
+/* src/styles/custom.css */
+
+/* Example: override a Tailwind color */
+.text-secondary {
+  color: rgb(72, 187, 201);
+}
+
+/* Example: add something Tailwind doesn't have */
+.glass {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+

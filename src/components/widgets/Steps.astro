@@ -20,9 +20,19 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
-  <div class:list={['flex flex-col gap-8 md:gap-12', { 'md:flex-row-reverse': isReversed }, { 'md:flex-row': image }]}>
-    <div class:list={['md:py-4 md:self-center', { 'md:basis-1/2': image }, { 'w-full': !image }]}>
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-5xl ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  <!-- Cancel out WidgetWrapper's top/bottom padding -->
+<div class="-mt-0 md:-mt-16 lg:-mt-20 -mb-20 md:-mb-16 lg:-mb-20">
+  
+  <div class="flex flex-col gap-8 md:gap-12 md:flex-row items-stretch">
+    
+    <!-- Text column -->
+    <div id="text-column" class="md:basis-1/2 flex flex-col justify-center">
       <Headline
         title={title}
         subtitle={subtitle}
@@ -35,25 +45,24 @@ const {
       />
       <Timeline items={items} classes={classes?.items as Record<string, never>} />
     </div>
+
+    <!-- EDIT Image column - auto rezie and scale option % -->
     {
       image && (
-        <div class="relative md:basis-1/2">
-          {typeof image === 'string' ? (
-            <Fragment set:html={image} />
-          ) : (
-            <Image
-              class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-              widths={[400, 768]}
-              sizes="(max-width: 768px) 100vw, 432px"
-              width={432}
-              height={768}
-              layout="cover"
-              src={image?.src}
-              alt={image?.alt || ''}
-            />
-          )}
-        </div>
+        <div id="image-column" class="md:basis-1/2 flex">
+  <div class="w-full" style="height: 100%;">
+    <Image
+      class="w-full h-full scale-[0.8] object-cover rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
+      src={image?.src}
+      alt={image?.alt || ''}
+      sizes="(max-width: 768px) 100vw, 432px"
+      widths={[400, 768]}
+    />
+  </div>
+</div>
+
       )
     }
+
   </div>
 </WidgetWrapper>
