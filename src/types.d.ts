@@ -138,20 +138,24 @@ export interface Item {
   icon?: string;
   classes?: Record<string, string>;
   callToAction?: CallToAction;
-  image?: Image;
+  image?: string | Image; // allow string paths too
+  tagline?: string;       // optional tagline above title
+  socialLinks?: Link[];   // optional social links
+  type?: string;          // e.g. "header"
 }
 
 export interface Price {
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  price?: number | string;
-  period?: string;
-  items?: Array<Item>;
-  callToAction?: CallToAction;
-  hasRibbon?: boolean;
-  ribbonTitle?: string;
-}
+    title?: string;
+    subtitle?: string;
+    description?: string;
+    price?: number | string;
+    period?: string;
+    items?: Array<Item>;
+    callToAction?: CallToAction;
+    hasRibbon?: boolean;
+    ribbonTitle?: string;
+    showPrice?: boolean; // added
+  }
 
 export interface Testimonial {
   title?: string;
@@ -162,11 +166,13 @@ export interface Testimonial {
 }
 
 export interface Input {
-  type: HTMLInputTypeAttribute;
+  type?: HTMLInputTypeAttribute; // allow defaulting to 'text'
   name: string;
   label?: string;
   autocomplete?: string;
   placeholder?: string;
+  options?: { value: string; label: string }[]; // for <select> fields
+  class?: string; // for hidden/custom classes
 }
 
 export interface Textarea {
@@ -229,6 +235,7 @@ export interface Stats extends Omit<Headline, 'classes'>, Widget {
 
 export interface Pricing extends Omit<Headline, 'classes'>, Widget {
   prices?: Array<Price>;
+  showPrice?: boolean; // added
 }
 
 export interface Testimonials extends Omit<Headline, 'classes'>, Widget {
@@ -278,4 +285,18 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   callToAction?: CallToAction;
 }
 
-export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+// CUSTOM: Reusable Link type socialLinks/secondaryLinks anywhere
+export interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+  image?: string;
+  imageKey?: string;
+  alt?: string;
+  customHtml?: string; // for raw HTML badges like DMCA
+}
+
+export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {
+  extraInputs?: Array<Input>; // ADD
+}

@@ -50,28 +50,23 @@ const {
   )}
 >
 
-        {image ? (
-          <img
-            src={image}
-            alt={title}
-            class="w-24 h-24 mb-4 rounded-full border-4 border-white object-cover"
-            loading="lazy"
-          />
-        ) : (
-          (icon || defaultIcon) && (
-            <Icon
-              name={icon || defaultIcon}
-              class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)}
-            />
-          )
-        )}
+// FIX
 
-{tagline && (
-  <div class="text-sm font-semibold text-primary uppercase tracking-wider mb-1">
-    {tagline}
-  </div>
+{image ? (
+  <img
+    src={typeof image === 'string' ? image : image.src}
+    alt={typeof image === 'string' ? (title || '') : (image.alt || title || '')}
+    class="w-24 h-24 mb-4 rounded-full border-4 border-white object-cover"
+    loading="lazy"
+  />
+) : (
+  (icon || defaultIcon) && (
+    <Icon
+      name={icon || defaultIcon}
+      class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)}
+    />
+  )
 )}
-
 
 <div class={twMerge('text-xl font-semibold leading-6 tracking-wider mb-2', titleClass, itemClasses?.title)}>
   {title}

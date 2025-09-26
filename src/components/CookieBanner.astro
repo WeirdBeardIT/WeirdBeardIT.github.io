@@ -24,17 +24,18 @@
 
   // Show banner if no consent stored
   if (!localStorage.getItem('cookieConsent')) {
-    banner.classList.remove('hidden');
+    banner?.classList.remove('hidden');
   }
 
   // Accept button click
-  acceptBtn.addEventListener('click', () => {
+  acceptBtn?.addEventListener('click', () => {
     localStorage.setItem('cookieConsent', 'true');
-    banner.classList.add('hidden');
+    banner?.classList.add('hidden');
   });
 
   // Privacy Policy link click
-  privacyLink.addEventListener('click', () => {
+  privacyLink?.addEventListener('click', () => {
     localStorage.setItem('cookieConsent', 'true');
   });
 </script>
+

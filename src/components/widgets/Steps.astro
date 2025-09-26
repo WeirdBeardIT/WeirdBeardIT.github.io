@@ -51,13 +51,13 @@ const {
       image && (
         <div id="image-column" class="md:basis-1/2 flex">
   <div class="w-full" style="height: 100%;">
-    <Image
-      class="w-full h-full scale-[0.8] object-cover rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
-      src={image?.src}
-      alt={image?.alt || ''}
-      sizes="(max-width: 768px) 100vw, 432px"
-      widths={[400, 768]}
-    />
+<Image
+  class="w-full h-full scale-[0.8] object-cover rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
+  src={typeof image === 'string' ? image : image?.src}
+  alt={typeof image === 'string' ? '' : image?.alt || ''}
+  sizes="(max-width: 768px) 100vw, 432px"
+  widths={[400, 768]}
+/>
   </div>
 </div>
 
