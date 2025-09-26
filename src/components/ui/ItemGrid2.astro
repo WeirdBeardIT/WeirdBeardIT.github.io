@@ -50,8 +50,6 @@ const {
   )}
 >
 
-// FIX
-
 {image ? (
   <img
     src={typeof image === 'string' ? image : image.src}
@@ -68,9 +66,16 @@ const {
   )
 )}
 
+{tagline && (
+  <div class="text-sm font-semibold text-primary uppercase tracking-wider mb-1">
+    {tagline}
+  </div>
+)}
+
 <div class={twMerge('text-xl font-semibold leading-6 tracking-wider mb-2', titleClass, itemClasses?.title)}>
   {title}
 </div>
+
 
         {socialLinks.length > 0 && (
           <div class="flex gap-4 mt-3">
