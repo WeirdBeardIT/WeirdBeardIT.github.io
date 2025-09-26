@@ -1,23 +1,15 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
+import type { Item } from '~/types'; // EDIT
 
-const {
-  id,
-  tagline = '',
-  title = '',
-  subtitle = '',
-  items = [],
-  isDark = false,
-  bg,
-  classes = {},
-} = Astro.props;
+const { id, tagline = '', title = '', subtitle = '', items = [], isDark = false, bg, classes = {} } = Astro.props;
 
 // Allow optional overrides while keeping sane defaults that match pricing/hero
 const headlineClasses = {
-  container: classes?.headlineContainer ?? 'max-w-5xl',           // matches hero/pricing center width
-  title: classes?.headlineTitle ?? 'text-4xl md:text-5xl',        // harmonious with site sections
-  subtitle: classes?.headlineSubtitle ?? 'text-xl',               // consistent subtitle size
+  container: classes?.headlineContainer ?? 'max-w-5xl', // matches hero/pricing center width
+  title: classes?.headlineTitle ?? 'text-4xl md:text-5xl', // harmonious with site sections
+  subtitle: classes?.headlineSubtitle ?? 'text-xl', // consistent subtitle size
 };
 const containerClass = `max-w-5xl mx-auto ${classes?.container ?? ''}`; // like pricing.astro
 ---
@@ -26,20 +18,23 @@ const containerClass = `max-w-5xl mx-auto ${classes?.container ?? ''}`; // like 
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={headlineClasses} />
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    {items.map((item) => (
-      <div class="flex flex-col rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white dark:bg-gray-800">
-        <img
-          src={item.image}
-          alt={item.title}
-          class="w-full aspect-[2/2] object-cover"
-          loading="lazy"
-        />
-        <div class="bg-[#212121] px-4 py-3 min-h-[64px] flex items-center justify-center">
-          <h3 class="text-base font-semibold text-white text-center no-underline border-0 decoration-0">
-            {item.title}
-          </h3>
+    {
+      items.map((item: Item) => (
+        <div class="flex flex-col rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white dark:bg-gray-800">
+          <img
+            src={typeof item.image === 'string' ? item.image : item.image?.src}
+            alt={typeof item.image === 'string' ? item.title || '' : item.image?.alt || item.title || ''}
+            class="w-full aspect-[2/2] object-cover"
+            loading="lazy"
+          />
+
+          <div class="bg-[#212121] px-4 py-3 min-h-[64px] flex items-center justify-center">
+            <h3 class="text-base font-semibold text-white text-center no-underline border-0 decoration-0">
+              {item.title}
+            </h3>
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </WidgetWrapper>

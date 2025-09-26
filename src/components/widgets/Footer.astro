@@ -29,13 +29,8 @@ export interface Props {
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
-<footer
-  class:list={[
-    { dark: theme === 'dark' },
-    'relative border-t border-gray-500/20 not-prose'
-  ]}
->
-<!--  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div> -->
+<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-500/20 not-prose']}>
+  <!--  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div> -->
   <div
     class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
   >
@@ -45,60 +40,53 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
         </div>
 
-<div class="text-sm text-muted flex flex-col gap-2">
-  {secondaryLinks.map(({ text, href, image, alt, customHtml }, index) => (
-    <div class="text-muted flex flex-col items-start gap-1">
-
-    <!-- CUSTOM HTML SECTION - DMCA LINK -->
-      {customHtml ? (
-        <Fragment set:html={customHtml} />
-      ) : (
-        <>
-        
-          {text && <span set:html={text} />}
-          {image && (
-            href ? (
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                <img 
-                  src={image} 
-                  alt={alt || ''} 
-                  class={index === 0 ? 'h-[40px] w-auto p-0' : 'h-[52px] w-auto p-0'}
-                  loading="lazy"
-                />
-              </a>
-            ) : (
-              <img 
-                src={image} 
-                alt={alt || ''} 
-                class={index === 0 ? 'h-[40px] w-auto p-0' : 'h-[52px] w-auto p-0'}
-                loading="lazy"
-              />
-            )
-          )}
-        </>
-      )}
-    </div>
-  ))}
-</div>
-
-
-
+        <div class="text-sm text-muted flex flex-col gap-2">
+          {
+            secondaryLinks.map(({ text, href, image, alt, customHtml }, index) => (
+              <div class="text-muted flex flex-col items-start gap-1">
+                {/* CUSTOM HTML SECTION - DMCA LINK */}
+                {customHtml ? (
+                  <Fragment set:html={customHtml} />
+                ) : (
+                  <>
+                    {text && <span set:html={text} />}
+                    {image &&
+                      (href ? (
+                        <a href={href} target="_blank" rel="noopener noreferrer">
+                          <img
+                            src={image}
+                            alt={alt || ''}
+                            class={index === 0 ? 'h-[40px] w-auto p-0' : 'h-[52px] w-auto p-0'}
+                            loading="lazy"
+                          />
+                        </a>
+                      ) : (
+                        <img
+                          src={image}
+                          alt={alt || ''}
+                          class={index === 0 ? 'h-[40px] w-auto p-0' : 'h-[52px] w-auto p-0'}
+                          loading="lazy"
+                        />
+                      ))}
+                  </>
+                )}
+              </div>
+            ))
+          }
+        </div>
       </div>
 
-<!-- WBIT ICON -->
-  <div class="col-span-6 md:col-span-3 lg:col-span-2
+      <!-- WBIT ICON -->
+      <div
+        class="col-span-6 md:col-span-3 lg:col-span-2
               md:col-start-10 lg:col-start-11
               row-start-1
-              flex justify-center lg:justify-end items-start">
-    <img
-      src="/images/WEIRD-BEARD-IT-icon.png"
-      alt="Weird Beard IT"
-      class="h-40 w-auto p-4"
-      loading="lazy"
-    />
-  </div>
-<!-- WBIT ICON -->
-      
+              flex justify-center lg:justify-end items-start"
+      >
+        <img src="/images/WEIRD-BEARD-IT-icon.png" alt="Weird Beard IT" class="h-40 w-auto p-4" loading="lazy" />
+      </div>
+      <!-- WBIT ICON -->
+
       {
         links.map(({ title, links }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">

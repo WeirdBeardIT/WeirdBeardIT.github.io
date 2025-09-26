@@ -7,6 +7,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Button from '~/components/ui/Button.astro';
@@ -19,16 +20,16 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 ---
-<Layout metadata={metadata}>
 
+<Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-  tagline="New for Sep25 - The Beard Strikes Back"
+    tagline="New for Sep25 - The Beard Strikes Back"
     actions={[
       {
         variant: 'primary',
-        text: 'Let\'s Talk',
+        text: "Let's Talk",
         icon: 'tabler:message-dots',
         href: '#contact',
       },
@@ -41,8 +42,10 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-   <!-- HIDDEN  <span class="hidden sm:inline"> -->
-        <span>We supercharge SharePoint with a no‑nonsense consulting approach that delivers creative, simple solutions to boost productivity and transform collaboration. Ready to take your SharePoint to the next level?</span
+      <!-- HIDDEN  <span class="hidden sm:inline"> -->
+      <span
+        >We supercharge SharePoint with a no‑nonsense consulting approach that delivers creative, simple solutions to
+        boost productivity and transform collaboration. Ready to take your SharePoint to the next level?</span
       >
     </Fragment>
   </Hero>
@@ -63,13 +66,11 @@ const metadata = {
       },
       {
         title: 'Tailored Design & Structure',
-        description:
-          'Built around your workflows, branding and organisational goals.',
+        description: 'Built around your workflows, branding and organisational goals.',
       },
       {
         title: 'Information Accessibility',
-        description:
-          'Easy navigation and search to quickly find the resources and updates that matter.',
+        description: 'Easy navigation and search to quickly find the resources and updates that matter.',
       },
     ]}
     image={{
@@ -79,7 +80,8 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Intranet Hub</h3>
-      Comprehensive development of a customised intranet solution tailored to your organisation’s needs, enhancing internal communication and collaboration.
+      Comprehensive development of a customised intranet solution tailored to your organisation’s needs, enhancing internal
+      communication and collaboration.
     </Fragment>
 
     <Fragment slot="bg">
@@ -98,21 +100,19 @@ const metadata = {
       },
       {
         title: 'Direct Communication Channels',
-        description:
-          'Central space for messages, updates and project discussions.',
+        description: 'Central space for messages, updates and project discussions.',
       },
       {
         title: 'Effortless File Sharing',
-        description:
-          "Easy, permission‑controlled access to documents and resources.",
+        description: 'Easy, permission‑controlled access to documents and resources.',
       },
-            {
+      {
         title: 'See How It Works',
         icon: 'tabler:brand-youtube-filled',
         description:
           '<a href="https://youtu.be/0sw9PSBu5EI" target="_blank" class="text-primary no-underline hover:underline inline-flex items-center gap-1">Demo: youtu.be/0sw9PSBu5EI</a>',
       },
-          ]}
+    ]}
     image={{
       src: '~/assets/images/WEIRD-BEARD-IT-cli.jpg',
       alt: 'Client Portal',
@@ -136,28 +136,26 @@ const metadata = {
     items={[
       {
         title: 'Designed Around Your Team',
-        description:
-          'Tailored layouts, tools and content to match each team’s unique needs.',
+        description: 'Tailored layouts, tools and content to match each team’s unique needs.',
       },
       {
         title: 'Process Optimisation',
-        description:
-          'Centralised access to workflows, forms and resources for faster task completion.',
+        description: 'Centralised access to workflows, forms and resources for faster task completion.',
       },
       {
         title: 'Improved Visibility',
-        description:
-          'Clear oversight of departmental activities, priorities and performance metrics.',
+        description: 'Clear oversight of departmental activities, priorities and performance metrics.',
       },
-      ]}
+    ]}
     image={{
       src: '~/assets/images/WEIRD-BEARD-IT-dep.jpg',
       alt: 'Astronauts Image',
     }}
   >
-     <Fragment slot="content">
+    <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Department Portal</h3>
-      Creation of specialised SharePoint portals for individual departments, streamlining processes and improving operational efficiency.
+      Creation of specialised SharePoint portals for individual departments, streamlining processes and improving operational
+      efficiency.
     </Fragment>
 
     <Fragment slot="bg">
@@ -165,7 +163,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-    <!-- Content Widget **************** -->
+  <!-- Content Widget **************** -->
 
   <Content
     isAfterContent
@@ -176,13 +174,11 @@ const metadata = {
       },
       {
         title: 'Version Control',
-        description:
-          'Track changes and maintain a clear history of document updates.',
+        description: 'Track changes and maintain a clear history of document updates.',
       },
       {
         title: 'Integrated Copilot Agents',
-        description:
-          "AI‑powered search and guidance to quickly locate, summarise and manage documents.",
+        description: 'AI‑powered search and guidance to quickly locate, summarise and manage documents.',
       },
     ]}
     image={{
@@ -200,30 +196,30 @@ const metadata = {
     </Fragment>
   </Content>
 
-<!-- EDIT: PORTFOLIO *************** -->
+  <!-- EDIT: PORTFOLIO *************** -->
 
-<Portfolio
-  id="showcase-solutions"
-  tagline="SOLUTIONS"
-  title="SharePoint Unleashed"
-  subtitle="From dynamic design to powerful automation, we transform SharePoint into a platform that feels alive - because your digital workplace should inspire, not expire."
-  items={[
-    {
-      title: 'Your Launchpad',
-      image: '/images/portfolio/WEIRD-BEARD-IT-sp1.png',
-    },
-    {
-      title: 'Goodbye Spreadsheets',
-      image: '/images/portfolio/WEIRD-BEARD-IT-sp2.png',
-    },
-    {
-      title: 'Organised By Design',
-      image: '/images/portfolio/WEIRD-BEARD-IT-sp3.png',
-    },
-  ]}
-/>
+  <Portfolio
+    id="showcase-solutions"
+    tagline="SOLUTIONS"
+    title="SharePoint Unleashed"
+    subtitle="From dynamic design to powerful automation, we transform SharePoint into a platform that feels alive - because your digital workplace should inspire, not expire."
+    items={[
+      {
+        title: 'Your Launchpad',
+        image: '/images/portfolio/WEIRD-BEARD-IT-sp1.png',
+      },
+      {
+        title: 'Goodbye Spreadsheets',
+        image: '/images/portfolio/WEIRD-BEARD-IT-sp2.png',
+      },
+      {
+        title: 'Organised By Design',
+        image: '/images/portfolio/WEIRD-BEARD-IT-sp3.png',
+      },
+    ]}
+  />
 
-   <!-- Features Widget *************** -->
+  <!-- Features Widget *************** -->
 
   <Features
     id="more-solutions"
@@ -259,24 +255,19 @@ const metadata = {
 
   <!-- Note Widget ******************* -->
 
-<Note
-  title=""
-  description='Looking for more than just SharePoint? We’ve got you covered with our <a href="#ateam" class="text-primary no-underline hover:underline inline-flex items-center gap-1">Trusted Tech Allies <svg xmlns="http://www.w3.org/2000/svg" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-checkbox"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg></a>'
-/>
-
-<!-- ICON HERE -->
-
-<div class="flex items-center justify-center">
-  <!-- Left line -->
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-  <img
-    src="/images/WEIRD-BEARD-IT-light-G.png"
-    alt="Divider"
-    class="mx-4 h-15 w-auto"
-    loading="lazy"
+  <Note
+    title=""
+    description='Looking for more than just SharePoint? We’ve got you covered with our <a href="#ateam" class="text-primary no-underline hover:underline inline-flex items-center gap-1">Trusted Tech Allies <svg xmlns="http://www.w3.org/2000/svg" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-checkbox"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg></a>'
   />
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-</div>
+
+  <!-- ICON HERE -->
+
+  <div class="flex items-center justify-center">
+    <!-- Left line -->
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+    <img src="/images/WEIRD-BEARD-IT-light-G.png" alt="Divider" class="mx-4 h-15 w-auto" loading="lazy" />
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  </div>
 
   <!-- Steps Widget ****************** -->
 
@@ -286,18 +277,17 @@ const metadata = {
     title="Building Champions, <br>not just Solutions"
     subtitle="Delivering the solution is just the start - your nominated staff become trained SharePoint Champions, equipped to keep your platform thriving."
     items={[
-
-// EDIT
-    {
-      type: 'header',
-      title: 'SharePoint Champion Training',
-    },
-// EDIT
+      // EDIT
+      {
+        type: 'header',
+        title: 'SharePoint Champion Training',
+      },
+      // EDIT
 
       {
         title: 'Level 1: <span class="font-medium">+100 XP</span>',
         description:
-          "Join the project from day one, sit in on key meetings and participate in decision‑making to understand how solutions take shape.",
+          'Join the project from day one, sit in on key meetings and participate in decision‑making to understand how solutions take shape.',
         icon: 'tabler:flag',
       },
       {
@@ -319,19 +309,14 @@ const metadata = {
     }}
   />
 
-<!-- ICON HERE -->
+  <!-- ICON HERE -->
 
-<div class="flex items-center justify-center my-8">
-  <!-- Left line -->
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-  <img
-    src="/images/WEIRD-BEARD-IT-light-G.png"
-    alt="Divider"
-    class="mx-4 h-15 w-auto"
-    loading="lazy"
-  />
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-</div>
+  <div class="flex items-center justify-center my-8">
+    <!-- Left line -->
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+    <img src="/images/WEIRD-BEARD-IT-light-G.png" alt="Divider" class="mx-4 h-15 w-auto" loading="lazy" />
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  </div>
 
   <!-- Pricing Widget ******************* -->
 
@@ -411,17 +396,12 @@ const metadata = {
 
   <!-- ICON HERE -->
 
-<div class="flex items-center justify-center">
-  <!-- Left line -->
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-  <img
-    src="/images/WEIRD-BEARD-IT-light-G.png"
-    alt="Divider"
-    class="mx-4 h-15 w-auto"
-    loading="lazy"
-  />
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-</div>
+  <div class="flex items-center justify-center">
+    <!-- Left line -->
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+    <img src="/images/WEIRD-BEARD-IT-light-G.png" alt="Divider" class="mx-4 h-15 w-auto" loading="lazy" />
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  </div>
 
   <!-- FAQs Widget ******************* -->
 
@@ -434,82 +414,79 @@ const metadata = {
       {
         title: 'Do we need SharePoint already installed?',
         description:
-          "No. Support is available whether starting from scratch or enhancing an existing setup. For those without SharePoint, guidance is provided on selecting the right plan, setting it up and tailoring it to specific needs.",
+          'No. Support is available whether starting from scratch or enhancing an existing setup. For those without SharePoint, guidance is provided on selecting the right plan, setting it up and tailoring it to specific needs.',
       },
       {
         title: 'Can you work with our existing SharePoint setup?',
         description:
-          "Yes. Existing environments can be audited, customised and optismised without disrupting day‑to‑day operations, whether newly implemented or long‑established.",
+          'Yes. Existing environments can be audited, customised and optismised without disrupting day‑to‑day operations, whether newly implemented or long‑established.',
       },
       {
         title: 'Do you offer training for our team?',
         description:
-          "Yes. Tailored training is available for end‑users, administrators and nominated SharePoint Champions, ensuring teams can confidently use and manage solutions long after go‑live.",
+          'Yes. Tailored training is available for end‑users, administrators and nominated SharePoint Champions, ensuring teams can confidently use and manage solutions long after go‑live.',
       },
       {
         title: 'How long does a typical SharePoint project take?',
         description:
-          "Timelines vary depending on scope. Smaller projects may be completed in weeks, while larger, more complex builds can take several months. A clear schedule is provided following the initial discovery session.",
+          'Timelines vary depending on scope. Smaller projects may be completed in weeks, while larger, more complex builds can take several months. A clear schedule is provided following the initial discovery session.',
       },
-            {
+      {
         title: 'Do you offer remote consultancy?',
         description:
-          "Yes. Consultancy is delivered entirely remotely, enabling collaboration with clients anywhere in the world and ensuring flexible, efficient project delivery.",
+          'Yes. Consultancy is delivered entirely remotely, enabling collaboration with clients anywhere in the world and ensuring flexible, efficient project delivery.',
       },
       {
         title: 'How weird is your beard?',
         description:
-          "It’s only weird if you stare at it. Otherwise, it’s just quietly plotting a pilot episode of a Netflix series nobody asked for.",
+          'It’s only weird if you stare at it. Otherwise, it’s just quietly plotting a pilot episode of a Netflix series nobody asked for.',
       },
     ]}
   />
 
   <!-- ICON HERE -->
 
-<div class="flex items-center justify-center">
-  <!-- Left line -->
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-  <img
-    src="/images/WEIRD-BEARD-IT-light-G.png"
-    alt="Divider"
-    class="mx-4 h-15 w-auto"
-    loading="lazy"
+  <div class="flex items-center justify-center">
+    <!-- Left line -->
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+    <img src="/images/WEIRD-BEARD-IT-light-G.png" alt="Divider" class="mx-4 h-15 w-auto" loading="lazy" />
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  </div>
+
+  <!-- Features2 Widget EDIT: Team ************** -->
+
+  <Features2
+    id="team"
+    title="Behind The Beard"
+    tagline="Team"
+    columns={2}
+    items={[
+      {
+        title: 'Anthony',
+        tagline: 'Digital Solutions & SharePoint Specialist',
+        description:
+          'I’ve spent over two decades helping UK organisations turn tech ideas into real‑world results. From shaping big‑picture strategies to rolling out creative, user‑friendly solutions. I’m all about making technology work smarter for people and businesses. Did I mention I love SharePoint?',
+        image: '/images/WEIRD-BEARD-IT-a1.jpg',
+        socialLinks: [
+          { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/anthonywithah' },
+          { ariaLabel: 'Slack', icon: 'tabler:brand-github', href: 'https://github.com/anthonywithah' },
+        ],
+      },
+      {
+        title: 'Anna',
+        tagline: 'Design & UX Specialist',
+        description:
+          'I’m a graphic designer with a background in design and animation, which means I know how to make things look good and feel right. I shape the visuals and graphics so the final look and feel lands with a sharp, professional edge.',
+        image: '/images/WEIRD-BEARD-IT-a2.jpg',
+        socialLinks: [
+          { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/annabannabee' },
+          { ariaLabel: 'LinkedIn', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/annabannadoodle' },
+        ],
+      },
+    ]}
   />
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-</div>
 
-<!-- Features2 Widget EDIT: Team ************** -->
-
-<Features2
-  id="team"
-  title="Behind The Beard"
-  tagline="Team"
-  columns={2}
-  items={[
-    {
-      title: 'Anthony',
-      tagline: 'Digital Solutions & SharePoint Specialist',
-      description: 'I’ve spent over two decades helping UK organisations turn tech ideas into real‑world results. From shaping big‑picture strategies to rolling out creative, user‑friendly solutions. I’m all about making technology work smarter for people and businesses. Did I mention I love SharePoint?',
-      image: '/images/WEIRD-BEARD-IT-a1.jpg',
-      socialLinks: [
-        { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/anthonywithah' },
-        { ariaLabel: 'Slack', icon: 'tabler:brand-github', href: 'https://github.com/anthonywithah' },
-      ],
-    },
-    {
-      title: 'Anna',
-      tagline: 'Design & UX Specialist',
-      description: 'I’m a graphic designer with a background in design and animation, which means I know how to make things look good and feel right. I shape the visuals and graphics so the final look and feel lands with a sharp, professional edge.',
-      image: '/images/WEIRD-BEARD-IT-a2.jpg',
-      socialLinks: [
-        { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/annabannabee' },
-        { ariaLabel: 'LinkedIn', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/annabannadoodle' },
-      ],
-    },
-  ]}
-/>
-
-<!-- Features2 Widget ************** -->
+  <!-- Features2 Widget ************** -->
 
   <Features2
     id="ateam"
@@ -519,19 +496,17 @@ const metadata = {
     items={[
       {
         title: 'Azure',
-        description: "Scalable, secure cloud solutions that power your apps, data and infrastructure.",
+        description: 'Scalable, secure cloud solutions that power your apps, data and infrastructure.',
         icon: 'tabler:brand-azure',
       },
       {
         title: 'Intune',
-        description:
-          "Seamless device and app management to keep your team productive and your data protected.",
+        description: 'Seamless device and app management to keep your team productive and your data protected.',
         icon: 'tabler:arrows-split',
       },
       {
         title: 'PowerBi',
-        description:
-          "Transform raw data into interactive dashboards and insights that drive smarter decisions.",
+        description: 'Transform raw data into interactive dashboards and insights that drive smarter decisions.',
         icon: 'tabler:chart-bar-popular',
       },
     ]}
@@ -541,81 +516,82 @@ const metadata = {
     </Fragment>
   </Features2>
 
-<!-- ICON HERE -->
+  <!-- ICON HERE -->
 
-<div class="flex items-center justify-center">
-  <!-- Left line -->
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-  <img
-    src="/images/WEIRD-BEARD-IT-light-G.png"
-    alt="Divider"
-    class="mx-4 h-15 w-auto"
-    loading="lazy"
-  />
-  <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
-</div>  
+  <div class="flex items-center justify-center">
+    <!-- Left line -->
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+    <img src="/images/WEIRD-BEARD-IT-light-G.png" alt="Divider" class="mx-4 h-15 w-auto" loading="lazy" />
+    <span class="h-px w-20" style="background-color: #3d3d3d;"></span>
+  </div>
 
-<!-- CONTACT -->
-<ContactUs
-  id="contact"
-  tagline="CONTACT"
-  title="Let’s Talk About Your SharePoint Project"
-  subtitle="Ready to get things moving? Whether it’s a fresh build or the next big upgrade, this is where your SharePoint journey takes off."
-inputs={[
-  { type: 'text', name: 'name', label: 'Name' },
-  { type: 'text', name: 'company', label: 'Company', autocomplete: 'organization' },
-  { type: 'email', name: 'email', label: 'Email' },
-  { type: 'select', name: 'referrer', label: 'How did you hear about us? (optional)', options: [
-      { value: '', label: 'Please select' },
-      { value: 'search', label: 'Search Engine' },
-      { value: 'linkedin', label: 'LinkedIn' },
-      { value: 'friend', label: 'Friend' },
-      { value: 'other', label: 'Other' }
-    ]
-  },
-  { type: 'text', name: 'friendName', label: 'LinkedIn username', class: 'hidden' },
-  { type: 'text', name: 'otherSource', label: 'Please specify', class: 'hidden' }
-]}
-textarea={{ label: 'Message' }}
+  <!-- CONTACT -->
+  <ContactUs
+    id="contact"
+    tagline="CONTACT"
+    title="Let’s Talk About Your SharePoint Project"
+    subtitle="Ready to get things moving? Whether it’s a fresh build or the next big upgrade, this is where your SharePoint journey takes off."
+    inputs={[
+      { type: 'text', name: 'name', label: 'Name' },
+      { type: 'text', name: 'company', label: 'Company', autocomplete: 'organization' },
+      { type: 'email', name: 'email', label: 'Email' },
+      {
+        type: 'select',
+        name: 'referrer',
+        label: 'How did you hear about us? (optional)',
+        options: [
+          { value: '', label: 'Please select' },
+          { value: 'search', label: 'Search Engine' },
+          { value: 'linkedin', label: 'LinkedIn' },
+          { value: 'friend', label: 'Friend' },
+          { value: 'other', label: 'Other' },
+        ],
+      },
+      { type: 'text', name: 'friendName', label: 'LinkedIn username', class: 'hidden' },
+      { type: 'text', name: 'otherSource', label: 'Please specify', class: 'hidden' },
+    ]}
+    textarea={{ label: 'Message' }}
+    extraInputs={[
+      {
+        type: 'select',
+        name: 'referrer',
+        label: 'How did you hear about us? (optional)',
+        options: [
+          { value: '', label: 'Please select' },
+          { value: 'search', label: 'Search Engine' },
+          { value: 'linkedin', label: 'LinkedIn' },
+          { value: 'friend', label: 'Friend' },
+          { value: 'other', label: 'Other' },
+        ],
+      },
+      {
+        type: 'text',
+        name: 'friendName',
+        label: 'Friend’s Name',
+        class: 'hidden',
+      },
+      {
+        type: 'text',
+        name: 'otherSource',
+        label: 'Please specify',
+        class: 'hidden',
+      },
+    ]}
+    description="Sit tight - A reply will be with you within 24 business hours or less."
+  >
+    <Fragment slot="buttons">
+      <div class="mt-0 mb-8 flex flex-wrap justify-center gap-4">
+        <Button
+          href="https://www.linkedin.com/company/weirdbeardit"
+          target="_blank"
+          variant="primary"
+          icon="tabler:brand-linkedin">Linkedin</Button
+        >
+        <!-- HIDDEN: <Button href="https://" target="_blank" variant="secondary" icon="tabler:brand-slack">Slack</Button> -->
+      </div>
+    </Fragment>
+  </ContactUs>
 
-extraInputs={[
-  {
-    type: 'select',
-    name: 'referrer',
-    label: 'How did you hear about us? (optional)',
-    options: [
-      { value: '', label: 'Please select' },
-      { value: 'search', label: 'Search Engine' },
-      { value: 'linkedin', label: 'LinkedIn' },
-      { value: 'friend', label: 'Friend' },
-      { value: 'other', label: 'Other' }
-    ]
-  },
-  {
-    type: 'text',
-    name: 'friendName',
-    label: 'Friend’s Name',
-    class: 'hidden'
-  },
-  {
-    type: 'text',
-    name: 'otherSource',
-    label: 'Please specify',
-    class: 'hidden'
-  }
-]}
-
-  description="Sit tight - A reply will be with you within 24 business hours or less."
->
-  <Fragment slot="buttons">
-    <div class="mt-0 mb-8 flex flex-wrap justify-center gap-4">
-      <Button href="https://www.linkedin.com/company/weirdbeardit" target="_blank" variant="primary" icon="tabler:brand-linkedin">Linkedin</Button>
-      <!-- HIDDEN: <Button href="https://" target="_blank" variant="secondary" icon="tabler:brand-slack">Slack</Button> -->
-    </div>
-  </Fragment>
-</ContactUs>
-
-<!-- Cookie Banner (fixed position, so it floats at bottom) -->
-<CookieBanner />
-
+  <!-- Cookie Banner (fixed position, so it floats at bottom) -->
+  <CookieBanner />
 </Layout>

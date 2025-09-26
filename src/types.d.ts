@@ -139,23 +139,23 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: string | Image; // allow string paths too
-  tagline?: string;       // optional tagline above title
-  socialLinks?: Link[];   // optional social links
-  type?: string;          // e.g. "header"
+  tagline?: string; // optional tagline above title
+  socialLinks?: Link[]; // optional social links
+  type?: string; // e.g. "header"
 }
 
 export interface Price {
-    title?: string;
-    subtitle?: string;
-    description?: string;
-    price?: number | string;
-    period?: string;
-    items?: Array<Item>;
-    callToAction?: CallToAction;
-    hasRibbon?: boolean;
-    ribbonTitle?: string;
-    showPrice?: boolean; // added
-  }
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  price?: number | string;
+  period?: string;
+  items?: Array<Item>;
+  callToAction?: CallToAction;
+  hasRibbon?: boolean;
+  ribbonTitle?: string;
+  showPrice?: boolean; // added
+}
 
 export interface Testimonial {
   title?: string;

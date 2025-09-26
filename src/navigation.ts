@@ -1,4 +1,5 @@
-import { getPermalink, _getBlogPermalink, _getAsset } from './utils/permalinks';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -72,8 +73,8 @@ export const footerData = {
       image: '/images/tp-dark.png',
       href: 'https://www.trustpilot.com/review/weirdbeardit.com',
     },
-  ], 
-  
+  ],
+
   socialLinks: [
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/weirdbeardit' },
     { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@WeirdBeardIT' },

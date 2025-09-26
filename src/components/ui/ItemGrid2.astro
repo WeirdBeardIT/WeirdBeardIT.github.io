@@ -15,97 +15,93 @@ const {
 } = classes;
 ---
 
-{items && items.length > 0 && (
-  <div
-    class={twMerge(
-      `grid gap-8 gap-x-12 sm:gap-y-8 ${
-        columns === 4
-          ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
-          : columns === 3
-            ? 'lg:grid-cols-3 sm:grid-cols-2'
-            : columns === 2
-              ? 'sm:grid-cols-2 '
-              : ''
-      }`,
-      containerClass
-    )}
-  >
-    {items.map((
-      {
-        tagline, // NEW: optional tagline above title
-        title,
-        description,
-        icon,
-        image, // NEW: optional profile image
-        socialLinks = [], // NEW: optional social links
-        callToAction,
-        classes: itemClasses = {}
-      }
-    ) => (
-     <div
-  class={twMerge(
-    'relative rounded-lg backdrop-blur border border-gray-500/20 dark:bg-[#212121] shadow px-6 py-8 flex flex-col items-center text-center intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
-    panelClass,
-    itemClasses?.panel
-  )}
->
+{
+  items && items.length > 0 && (
+    <div
+      class={twMerge(
+        `grid gap-8 gap-x-12 sm:gap-y-8 ${
+          columns === 4
+            ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
+            : columns === 3
+              ? 'lg:grid-cols-3 sm:grid-cols-2'
+              : columns === 2
+                ? 'sm:grid-cols-2 '
+                : ''
+        }`,
+        containerClass
+      )}
+    >
+      {items.map(
+        ({
+          tagline, // NEW: optional tagline above title
+          title,
+          description,
+          icon,
+          image, // NEW: optional profile image
+          socialLinks = [], // NEW: optional social links
+          callToAction,
+          classes: itemClasses = {},
+        }) => (
+          <div
+            class={twMerge(
+              'relative rounded-lg backdrop-blur border border-gray-500/20 dark:bg-[#212121] shadow px-6 py-8 flex flex-col items-center text-center intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
+              panelClass,
+              itemClasses?.panel
+            )}
+          >
+            {image ? (
+              <img
+                src={typeof image === 'string' ? image : image.src}
+                alt={typeof image === 'string' ? title || '' : image.alt || title || ''}
+                class="w-24 h-24 mb-4 rounded-full border-4 border-white object-cover"
+                loading="lazy"
+              />
+            ) : (
+              (icon || defaultIcon) && (
+                <Icon
+                  name={icon || defaultIcon}
+                  class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)}
+                />
+              )
+            )}
 
-{image ? (
-  <img
-    src={typeof image === 'string' ? image : image.src}
-    alt={typeof image === 'string' ? (title || '') : (image.alt || title || '')}
-    class="w-24 h-24 mb-4 rounded-full border-4 border-white object-cover"
-    loading="lazy"
-  />
-) : (
-  (icon || defaultIcon) && (
-    <Icon
-      name={icon || defaultIcon}
-      class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)}
-    />
+            {tagline && <div class="text-sm font-semibold text-primary uppercase tracking-wider mb-1">{tagline}</div>}
+
+            <div class={twMerge('text-xl font-semibold leading-6 tracking-wider mb-2', titleClass, itemClasses?.title)}>
+              {title}
+            </div>
+
+            {socialLinks.length > 0 && (
+              <div class="flex gap-4 mt-3">
+                {socialLinks.map(({ ariaLabel, icon, href }) => (
+                  <a
+                    href={href}
+                    aria-label={ariaLabel}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-500 hover:text-primary transition"
+                  >
+                    <Icon name={icon} class="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+            )}
+
+            {description && (
+              <p
+                class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)}
+                set:html={description}
+              />
+            )}
+
+            {callToAction && (
+              <div class="mt-2">
+                <Button {...callToAction} />
+              </div>
+            )}
+          </div>
+        )
+      )}
+    </div>
   )
-)}
-
-{tagline && (
-  <div class="text-sm font-semibold text-primary uppercase tracking-wider mb-1">
-    {tagline}
-  </div>
-)}
-
-<div class={twMerge('text-xl font-semibold leading-6 tracking-wider mb-2', titleClass, itemClasses?.title)}>
-  {title}
-</div>
-
-
-        {socialLinks.length > 0 && (
-          <div class="flex gap-4 mt-3">
-            {socialLinks.map(({ ariaLabel, icon, href }) => (
-              <a
-                href={href}
-                aria-label={ariaLabel}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-gray-500 hover:text-primary transition"
-              >
-                <Icon name={icon} class="w-5 h-5" />
-              </a>
-            ))}
-          </div>
-        )}
-
-        {description && (
-          <p
-            class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)}
-            set:html={description}
-          />
-        )}
-
-        {callToAction && (
-          <div class="mt-2">
-            <Button {...callToAction} />
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-)}
+}

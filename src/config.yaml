@@ -11,7 +11,7 @@ metadata:
   title:
     default: Weird Beard IT
     template: '%s — Weird Beard IT'
-  description: "Dead Good SharePoint Solutions"
+  description: 'Dead Good SharePoint Solutions'
   robots:
     index: true
     follow: true
@@ -22,10 +22,10 @@ metadata:
         width: 1200
         height: 628
     type: website
- # twitter:
- #   handle: '@arthelokyo'
- #   site: '@arthelokyo'
- #   cardType: summary_large_image
+  # twitter:
+  #   handle: '@arthelokyo'
+  #   site: '@arthelokyo'
+  #   cardType: summary_large_image
 
 i18n:
   language: en

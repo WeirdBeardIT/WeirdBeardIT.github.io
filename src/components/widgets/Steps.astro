@@ -11,7 +11,8 @@ const {
   tagline = await Astro.slots.render('tagline'),
   items = [],
   image = await Astro.slots.render('image'),
-  _isReversed = false,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  isReversed = false,
 
   id,
   isDark = false,
@@ -20,49 +21,41 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper
-  id={id}
-  isDark={isDark}
-  containerClass={`max-w-5xl ${classes?.container ?? ''}`}
-  bg={bg}
->
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
   <!-- Cancel out WidgetWrapper's top/bottom padding -->
-<div class="-mt-0 md:-mt-16 lg:-mt-20 -mb-20 md:-mb-16 lg:-mb-20">
-  
-  <div class="flex flex-col gap-8 md:gap-12 md:flex-row items-stretch">
-    
-    <!-- Text column -->
-    <div id="text-column" class="md:basis-1/2 flex flex-col justify-center">
-      <Headline
-        title={title}
-        subtitle={subtitle}
-        tagline={tagline}
-        classes={{
-          container: 'text-left rtl:text-right',
-          title: 'text-3xl lg:text-4xl',
-          ...((classes?.headline as object) ?? {}),
-        }}
-      />
-      <Timeline items={items} classes={classes?.items as Record<string, never>} />
+  <div class="-mt-0 md:-mt-16 lg:-mt-20 -mb-20 md:-mb-16 lg:-mb-20">
+    <div class="flex flex-col gap-8 md:gap-12 md:flex-row items-stretch">
+      <!-- Text column -->
+      <div id="text-column" class="md:basis-1/2 flex flex-col justify-center">
+        <Headline
+          title={title}
+          subtitle={subtitle}
+          tagline={tagline}
+          classes={{
+            container: 'text-left rtl:text-right',
+            title: 'text-3xl lg:text-4xl',
+            ...((classes?.headline as object) ?? {}),
+          }}
+        />
+        <Timeline items={items} classes={classes?.items as Record<string, never>} />
+      </div>
+
+      <!-- EDIT Image column - auto rezie and scale option % -->
+      {
+        image && (
+          <div id="image-column" class="md:basis-1/2 flex">
+            <div class="w-full" style="height: 100%;">
+              <Image
+                class="w-full h-full scale-[0.8] object-cover rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
+                src={typeof image === 'string' ? image : image?.src}
+                alt={typeof image === 'string' ? '' : image?.alt || ''}
+                sizes="(max-width: 768px) 100vw, 432px"
+                widths={[400, 768]}
+              />
+            </div>
+          </div>
+        )
+      }
     </div>
-
-    <!-- EDIT Image column - auto rezie and scale option % -->
-    {
-      image && (
-        <div id="image-column" class="md:basis-1/2 flex">
-  <div class="w-full" style="height: 100%;">
-<Image
-  class="w-full h-full scale-[0.8] object-cover rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
-  src={typeof image === 'string' ? image : image?.src}
-  alt={typeof image === 'string' ? '' : image?.alt || ''}
-  sizes="(max-width: 768px) 100vw, 432px"
-  widths={[400, 768]}
-/>
-  </div>
-</div>
-
-      )
-    }
-
   </div>
 </WidgetWrapper>

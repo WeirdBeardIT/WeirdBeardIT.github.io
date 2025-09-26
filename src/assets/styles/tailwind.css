@@ -103,9 +103,9 @@
   margin-top: 0;
 }
 
-  /* CUSTOM CSS: FORM OPTIONS BACKGROUND */
+/* CUSTOM CSS: FORM OPTIONS BACKGROUND */
 
-  select option {
-    background-color: #212121;
-    color: white;
-  }
+select option {
+  background-color: #212121;
+  color: white;
+}

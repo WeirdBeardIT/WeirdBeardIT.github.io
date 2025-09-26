@@ -80,16 +80,15 @@ const {
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
-<Image
-  class="mx-auto rounded-md h-auto max-w-[788px]"
-  widths={[400, 768]}
-  sizes="100vw"
-  loading="eager"
-  width={788}
-  height={332}
-  {...image}
-/>
-
+                <Image
+                  class="mx-auto rounded-md h-auto max-w-[788px]"
+                  widths={[400, 768]}
+                  sizes="100vw"
+                  loading="eager"
+                  width={788}
+                  height={332}
+                  {...image}
+                />
               )}
             </div>
           )
