@@ -37,14 +37,30 @@ const {
             ...((classes?.headline as object) ?? {}),
           }}
         />
+
+        <!-- Mobile-only image (below subtitle) -->
+        {
+          image && (
+            <div class="block md:hidden mb-6">
+              <Image
+                class="w-full h-auto object-cover rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
+                src={typeof image === 'string' ? image : image?.src}
+                alt={typeof image === 'string' ? '' : image?.alt || ''}
+                sizes="(max-width: 768px) 100vw"
+                widths={[400, 768]}
+              />
+            </div>
+          )
+        }
+
         <Timeline items={items} classes={classes?.items as Record<string, never>} />
       </div>
 
-      <!-- EDIT Image column - auto rezie and scale option % -->
+      <!-- Desktop-only image column -->
       {
         image && (
-          <div id="image-column" class="md:basis-1/2 flex">
-            <div class="w-full" style="height: 100%;">
+          <div id="image-column" class="hidden md:flex md:basis-1/2">
+            <div class="w-full">
               <Image
                 class="w-full h-full scale-[0.8] object-cover rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
                 src={typeof image === 'string' ? image : image?.src}
