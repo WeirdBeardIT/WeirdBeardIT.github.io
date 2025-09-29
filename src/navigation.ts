@@ -63,7 +63,7 @@ export const footerData = {
            class="dmca-badge"
            target="_blank" 
            rel="noopener noreferrer">
-          <img src="/images/dmca-badge-w200-5x1-10.png" 
+          <img src="https://www.dmca.com/Badges/dmca-badge-w200-5x1-10.png?ID=23179879-0f49-4d9c-b732-b3d562667881" 
                alt="DMCA.com Protection Status" />
         </a>
         <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
