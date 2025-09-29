@@ -58,7 +58,7 @@ export const footerData = {
   secondaryLinks: [
     {
       customHtml: `
-        <a href="//www.dmca.com/Protection/Status.aspx?ID=23179879-0f49-4d9c-b732-b3d562667881" 
+        <a href="https://www.dmca.com/Protection/Status.aspx?ID=23179879-0f49-4d9c-b732-b3d562667881&refurl=https://weirdbeardit.com" 
            title="DMCA.com Protection Status" 
            class="dmca-badge"
            target="_blank" 
