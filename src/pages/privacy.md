@@ -3,51 +3,98 @@ title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-Last updated: September 2025
+Last updated: October 2025
 
-## 1. Privacy Policy
+## 1. Website Terms of Use
 
-We respect your privacy and comply with UK GDPR and the Data Protection Act 2018.
+This website is operated by Weird Beard IT (“we”, “our”, “us”). By using this site, you agree to these terms. If you do not agree, please do not use the site.
 
-### What we collect
+### Use of the site
 
-- Name, email, phone number
-- Business details
-- Technical data (IP address, browser type)
+You may browse and share content from this site for personal or business reference, but you must not copy, sell, or exploit it without our written permission.
 
-### How we use it
+### Accuracy of information
 
-- To provide and manage our services
-- To respond to enquiries
-- To meet legal obligations
+We make reasonable efforts to keep content accurate, but it is provided for general information only and should not be relied upon as professional advice. We do not guarantee that the site or its content will always be available, uninterrupted, or error‑free.
 
-### Legal basis
+### Intellectual property
 
-We process personal data on the basis of consent, contract, or legitimate interest.
+All text, graphics, and branding are owned by or licensed to us. You may not use them without permission.
 
-### Sharing
+### Limitation of liability
 
-We do not sell your data. We may share it with trusted service providers who help us deliver our services.
+We are not liable for any loss or damage arising from your use of this site, except where UK law does not allow such exclusions.
 
-### International transfers
+---
 
-If we transfer data outside the UK/EEA, we ensure appropriate safeguards are in place.
+## 2. Service Terms & Conditions
 
-### Data Retention
+These terms apply to all IT consulting services provided by Weird Beard IT.
 
-We keep personal data only as long as necessary to fulfil the purposes we collected it for, including legal, accounting, or reporting requirements.
+### Definitions and Scope
 
-### Your rights
+In these Service Terms:
 
-You can request access, correction, deletion, or restriction of your data at any time.
+- **"Services"** means the IT consulting, support, training, or related deliverables we provide as described in our written proposal or agreement with you.
+- **"Deliverables"** means any reports, documents, software configurations, or other outputs we create for you as part of the Services.
+- **"Client", "you" or "your"** means the person or organisation purchasing the Services.
+- **"Weird Beard IT", "we", "our" or "us"** means Weird Beard IT Limited.
 
-## Cookie Policy
+These terms apply to all Services we provide unless otherwise agreed in writing.
 
-We use **essential cookies** only to make our site work and keep it secure. These cookies are necessary for core functions such as page navigation, security, and accessibility.  
-Without them, the site just wouldn’t work properly. We **do not** use cookies for analytics, advertising, or tracking.
+### Services
 
-You can manage or delete cookies at any time through your browser settings.
+We will provide the Services described in our written proposal or agreement. Any changes must be agreed in writing.
+
+### Fees & payment
+
+Fees are as stated in our proposal. Payment is due within 14 days of invoice unless otherwise agreed.  
+We may charge statutory interest on overdue amounts in accordance with the Late Payment of Commercial Debts (Interest) Act 1998.
+
+### Client responsibilities
+
+You agree to provide timely access, information, and cooperation needed for us to deliver the Services.
+
+### Confidentiality
+
+We will keep your confidential information secure and will not share it without your permission, except as required by law. This obligation continues after termination of the agreement.
+
+### Intellectual property
+
+Unless agreed otherwise, you will own the Deliverables we create for you. We retain the right to use non‑confidential, non‑identifiable work for portfolio purposes.  
+We also retain ownership of any pre‑existing tools, templates, or know‑how used to deliver the Services.
+
+### Data protection
+
+We will process any personal data in accordance with our [Privacy Policy](/privacy).
+
+### Liability
+
+Our total liability is limited to the amount you have paid for the Services in the 12 months before the claim.  
+Nothing in these terms limits liability for death or personal injury caused by negligence, fraud, or any other liability which cannot be excluded under UK law.
+
+### Force majeure
+
+We are not liable for any delay or failure to perform our obligations due to events beyond our reasonable control, including but not limited to natural disasters, strikes, or internet outages.
+
+### Termination
+
+Either party may terminate with 7 days’ written notice.  
+We may terminate immediately if you fail to pay fees when due or materially breach these terms.  
+Fees for work completed up to termination remain payable.
+
+### Severability
+
+If any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.
+
+### Entire agreement
+
+These terms, together with our written proposal or agreement, form the entire agreement between us and supersede any prior discussions or representations.
+
+### Governing law
+
+These terms are governed by the laws of England and Wales, and any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.
 
 ### Contact
 
-If you have any privacy questions, you can reach us via our [contact form](/#contact)
+If you have any questions, you can reach us via our [contact form](/#contact)

@@ -3,7 +3,7 @@ title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-Last updated: September 2025
+Last updated: October 2025
 
 ## 1. Website Terms of Use
 
@@ -15,7 +15,7 @@ You may browse and share content from this site for personal or business referen
 
 ### Accuracy of information
 
-We make reasonable efforts to keep content accurate, but it is provided for general information only and should not be relied upon as professional advice.
+We make reasonable efforts to keep content accurate, but it is provided for general information only and should not be relied upon as professional advice. We do not guarantee that the site will always be available or free from errors.
 
 ### Intellectual property
 
@@ -29,9 +29,20 @@ We are not liable for any loss or damage arising from your use of this site, exc
 
 These terms apply to all IT consulting services provided by Weird Beard IT.
 
+### Definitions and Scope
+
+In these Service Terms:
+
+- "Services" means the IT consulting, support, training, or related deliverables we provide as described in our written proposal or agreement with you.
+- "Deliverables" means any reports, documents, software configurations, or other outputs we create for you as part of the Services.
+- "Client", "you" or "your" means the person or organisation purchasing the Services.
+- "Weird Beard IT", "we", "our" or "us" means Weird Beard IT Limited.
+
+These terms apply to all Services we provide unless otherwise agreed in writing.
+
 ### Services
 
-We will provide the services described in our written proposal or agreement. Any changes must be agreed in writing.
+We will provide the Services described in our written proposal or agreement. Any changes must be agreed in writing.
 
 ### Fees & payment
 
@@ -43,23 +54,35 @@ You agree to provide timely access, information and cooperation needed for us to
 
 ### Confidentiality
 
-We will keep your confidential information secure and will not share it without your permission, except as required by law.
+We will keep your confidential information secure and will not share it without your permission, except as required by law. This obligation continues after termination of the agreement.
 
 ### Intellectual property
 
 Unless agreed otherwise, you will own the deliverables we create for you. We retain the right to use non‑confidential, non‑identifiable work for portfolio purposes.
 
+### Data protection
+
+We will process any personal data in accordance with our [Privacy Policy](/privacy)
+
 ### Liability
 
-Our total liability is limited to the amount you have paid for the services in the 12 months before the claim.
+Our total liability is limited to the amount you have paid for the services in the 12 months before the claim. Nothing in these terms limits liability for death or personal injury caused by negligence, fraud, or any other liability which cannot be excluded under UK law.
+
+### Force majeure
+
+We are not liable for any delay or failure to perform our obligations due to events beyond our reasonable control, including but not limited to natural disasters, strikes, or internet outages.
 
 ### Termination
 
-Either party may terminate with 7 days’ written notice. Fees for work done up to termination remain payable.
+Either party may terminate with 7 days’ written notice. We may terminate immediately if you fail to pay fees when due or materially breach these terms. Fees for work completed up to termination remain payable.
+
+## Severability
+
+If any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.
 
 ### Governing law
 
-These terms are governed by the laws of United Kingdom.
+These terms are governed by the laws of England and Wales, and any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.
 
 ### Contact
 
