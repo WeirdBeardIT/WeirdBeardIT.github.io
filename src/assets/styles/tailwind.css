@@ -109,3 +109,16 @@ select option {
   background-color: #212121;
   color: white;
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+select option:hover,
+select option:checked {
+  background-color: #333 !important;
+  color: white;
+}

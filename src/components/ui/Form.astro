@@ -81,7 +81,9 @@ const { inputs = [], textarea, disclaimer, button = 'Send', description = '' } =
               <select
                 name={name}
                 id={name}
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20 bg-transparent"
+                class="appearance-none focus:outline-none focus:ring-0 focus:border-gray-500/40
+       py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20
+       bg-transparent text-black dark:text-white dark:bg-[#212121]"
               >
                 {options.map((opt) => (
                   <option value={opt.value}>{opt.label}</option>
@@ -92,7 +94,9 @@ const { inputs = [], textarea, disclaimer, button = 'Send', description = '' } =
                 type={type}
                 name={name}
                 id={name}
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20 bg-transparent"
+                class="appearance-none focus:outline-none focus:ring-0 focus:border-gray-500/40
+       py-3 px-4 block w-full text-md rounded-lg border border-gray-500/20
+       bg-transparent text-black dark:text-white dark:bg-[#212121]"
               />
             )}
           </div>
