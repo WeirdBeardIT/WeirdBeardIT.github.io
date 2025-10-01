@@ -3,98 +3,105 @@ title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
+# Privacy Policy
+
 Last updated: October 2025
 
-## 1. Website Terms of Use
-
-This website is operated by Weird Beard IT (“we”, “our”, “us”). By using this site, you agree to these terms. If you do not agree, please do not use the site.
-
-### Use of the site
-
-You may browse and share content from this site for personal or business reference, but you must not copy, sell, or exploit it without our written permission.
-
-### Accuracy of information
-
-We make reasonable efforts to keep content accurate, but it is provided for general information only and should not be relied upon as professional advice. We do not guarantee that the site or its content will always be available, uninterrupted, or error‑free.
-
-### Intellectual property
-
-All text, graphics, and branding are owned by or licensed to us. You may not use them without permission.
-
-### Limitation of liability
-
-We are not liable for any loss or damage arising from your use of this site, except where UK law does not allow such exclusions.
+Weird Beard IT Limited ("we", "our", "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website or services.
 
 ---
 
-## 2. Service Terms & Conditions
+## 1. Information we collect
 
-These terms apply to all IT consulting services provided by Weird Beard IT.
+We may collect and process the following types of information:
 
-### Definitions and Scope
+- **Information you provide directly** (e.g. when you complete our contact form): name, email, phone number, business details.
+- **Technical information**: our hosting and form providers may process standard technical data (such as IP address and browser type) as part of delivering the service, but we do not actively store or use this information.
+- **Service data**: information you provide when engaging us for IT consulting, support, or training.
+- **Cookies and tracking**: see Section 6 below.
 
-In these Service Terms:
+---
 
-- **"Services"** means the IT consulting, support, training, or related deliverables we provide as described in our written proposal or agreement with you.
-- **"Deliverables"** means any reports, documents, software configurations, or other outputs we create for you as part of the Services.
-- **"Client", "you" or "your"** means the person or organisation purchasing the Services.
-- **"Weird Beard IT", "we", "our" or "us"** means Weird Beard IT Limited.
+## 2. How we use your information
 
-These terms apply to all Services we provide unless otherwise agreed in writing.
+We use your information to:
 
-### Services
+- Provide and deliver our IT services.
+- Respond to enquiries and support requests.
+- Manage billing, payments, and contracts.
+- Improve our website and services.
+- Comply with legal and regulatory obligations.
+- Send you updates or marketing communications (only if you have opted in).
 
-We will provide the Services described in our written proposal or agreement. Any changes must be agreed in writing.
+---
 
-### Fees & payment
+## 3. Sharing your information
 
-Fees are as stated in our proposal. Payment is due within 14 days of invoice unless otherwise agreed.  
-We may charge statutory interest on overdue amounts in accordance with the Late Payment of Commercial Debts (Interest) Act 1998.
+We do not sell or rent your personal data. We may share it with:
 
-### Client responsibilities
+- **Trusted service providers** who help us deliver our services (e.g. hosting, email, analytics).
+- **Professional advisers** (e.g. accountants, lawyers) where necessary.
+- **Regulators or authorities** if required by law.
 
-You agree to provide timely access, information, and cooperation needed for us to deliver the Services.
+All third parties are required to respect the security of your data and process it in accordance with the law.
 
-### Confidentiality
+---
 
-We will keep your confidential information secure and will not share it without your permission, except as required by law. This obligation continues after termination of the agreement.
+## 4. Data retention
 
-### Intellectual property
+We keep your personal data only as long as necessary to fulfil the purposes we collected it for, including legal, accounting, or reporting requirements. When no longer needed, we securely delete or anonymise it.
 
-Unless agreed otherwise, you will own the Deliverables we create for you. We retain the right to use non‑confidential, non‑identifiable work for portfolio purposes.  
-We also retain ownership of any pre‑existing tools, templates, or know‑how used to deliver the Services.
+---
 
-### Data protection
+## 5. Your rights
 
-We will process any personal data in accordance with our [Privacy Policy](/privacy).
+Under UK data protection law, you have the right to:
 
-### Liability
+- Access the personal data we hold about you.
+- Request correction of inaccurate or incomplete data.
+- Request deletion of your data where there is no legal reason for us to keep it.
+- Object to or restrict processing of your data in certain circumstances.
+- Request transfer of your data to another provider (data portability).
+- Withdraw consent at any time (where processing is based on consent).
 
-Our total liability is limited to the amount you have paid for the Services in the 12 months before the claim.  
-Nothing in these terms limits liability for death or personal injury caused by negligence, fraud, or any other liability which cannot be excluded under UK law.
+To exercise these rights, please contact us (see Section 8).
 
-### Force majeure
+---
 
-We are not liable for any delay or failure to perform our obligations due to events beyond our reasonable control, including but not limited to natural disasters, strikes, or internet outages.
+## 6. Cookies and tracking
 
-### Termination
+Cookies are small text files placed on your device to help websites function. Some are essential, others are used for analytics or advertising. We only use essential cookies.
 
-Either party may terminate with 7 days’ written notice.  
-We may terminate immediately if you fail to pay fees when due or materially breach these terms.  
-Fees for work completed up to termination remain payable.
+### Essential cookies
 
-### Severability
+- These are required to make our site work, keep it secure, and ensure basic functions such as page navigation and accessibility.
+- Our copyright protection badge (provided by **DMCA.com**) may set a temporary session cookie (`ARRAffinitySameSite`). This cookie is strictly necessary for the badge to function and does not track your activity.
 
-If any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.
+### No analytics or advertising cookies
 
-### Entire agreement
+We do not use cookies for analytics, advertising, or tracking. All cookies we set are session‑based and expire when you close your browser.
 
-These terms, together with our written proposal or agreement, form the entire agreement between us and supersede any prior discussions or representations.
+### Managing cookies
 
-### Governing law
+You can manage or delete cookies at any time through your browser settings. Please note that disabling essential cookies may affect the functionality of our website.
 
-These terms are governed by the laws of England and Wales, and any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.
+---
 
-### Contact
+## 7. Security
 
-If you have any questions, you can reach us via our [contact form](/#contact)
+We take appropriate technical and organisational measures to protect your personal data against loss, misuse, or unauthorised access. However, no method of transmission over the internet is completely secure.
+
+---
+
+## 8. Contact us
+
+If you have any questions about this Privacy Policy or how we handle your data, please contact us:
+
+**Weird Beard IT Limited**  
+Contact form: [contact form](/#contact)
+
+---
+
+## 9. Changes to this policy
+
+We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.
