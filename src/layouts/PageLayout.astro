@@ -14,9 +14,14 @@ export interface Props {
 }
 
 const { metadata } = Astro.props;
+// EDIT
+const enrichedMetadata: MetaData = {
+  ...metadata,
+  canonical: Astro.url.href, // ensures each page has its own canonical
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={enrichedMetadata}>
   <!-- ANNOUNCEMENT DISABLED -->
   <!-- 
 <slot name="announcement">

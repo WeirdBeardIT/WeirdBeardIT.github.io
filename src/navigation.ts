@@ -36,6 +36,7 @@ export const footerData = {
       title: 'Level Up',
       links: [
         { text: 'Solutions', href: getPermalink('#solutions') },
+        { text: 'Support', href: getPermalink('#support') },
         { text: 'Training', href: getPermalink('#training') },
       ],
     },

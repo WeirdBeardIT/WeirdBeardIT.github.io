@@ -1,9 +1,13 @@
 ---
 title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
----
 
-# Privacy Policy
+//EDIT: EXCLUDE FROM SEARCH ENGINES
+robots:
+  index: false
+  follow: true
+canonical: false
+---
 
 Last updated: October 2025
 

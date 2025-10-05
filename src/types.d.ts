@@ -145,6 +145,7 @@ export interface Item {
 }
 
 export interface Price {
+  tagline?: string;
   title?: string;
   subtitle?: string;
   description?: string;

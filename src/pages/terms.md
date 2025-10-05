@@ -1,6 +1,12 @@
 ---
 title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
+
+//EDIT: EXCLUDE FROM SEARCH ENGINES
+robots:
+  index: false
+  follow: true
+canonical: false
 ---
 
 Last updated: October 2025
