@@ -1,1 +1,1 @@
-© 2025 Weird Beard IT Limited (Company No. 16740585). All rights reserved.
+© 2025 Weird Beard IT Limited. All rights reserved.
