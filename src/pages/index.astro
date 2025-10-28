@@ -25,7 +25,7 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="The Beard Strikes Back"
+    tagline="Straightforward Consulting"
     actions={[
       {
         variant: 'primary',
@@ -44,8 +44,8 @@ const metadata = {
     <Fragment slot="subtitle">
       <!-- HIDDEN  <span class="hidden sm:inline"> -->
       <span
-        >We supercharge SharePoint with a no‑nonsense consulting approach that delivers creative, simple solutions to
-        boost productivity and transform collaboration. Ready to take your SharePoint to the next level?</span
+        >Supercharge SharePoint with a no‑nonsense consulting approach that delivers creative, simple solutions to boost
+        productivity and transform collaboration. Ready to take your SharePoint to the next level?</span
       >
     </Fragment>
   </Hero>
@@ -57,7 +57,7 @@ const metadata = {
     isReversed
     tagline="SOLUTIONS"
     title="Level Up Your SharePoint"
-    subtitle="Yes, SharePoint is powerful. No, it doesn’t have to feel like a maze of folders with no exit signs. Our focused suite of solutions turns complex business needs into platforms your team might actually enjoy using."
+    subtitle="Yes, SharePoint is powerful. No, it doesn’t have to feel like a maze of folders with no exit signs. A focused suite of solutions turns complex business needs into platforms your team might actually enjoy using."
     items={[
       {
         title: 'Centralised Communication',
@@ -205,7 +205,7 @@ const metadata = {
     id="showcase-solutions"
     tagline="SOLUTIONS"
     title="SharePoint Unleashed"
-    subtitle="From dynamic design to powerful automation, we transform SharePoint into a platform that feels alive - because your digital workplace should inspire, not expire."
+    subtitle="From dynamic design to powerful automation, transform SharePoint into a platform that feels alive - because your digital workplace should inspire, not expire."
     items={[
       {
         title: 'Your Launchpad',
@@ -257,7 +257,7 @@ const metadata = {
       {
         title: 'Onboarding Made Simple',
         description:
-          'Installing SharePoint is only half the story. Smooth onboarding for new users and post‑migration teams should feel less like a cliff‑jump and more like a guided tour.',
+          'Installing SharePoint is only half the story. Smooth onboarding for new and migrated users should feel less like a cliff‑jump and more like a guided tour.',
         icon: 'tabler:arrow-right-to-arc',
       },
       {
@@ -273,7 +273,7 @@ const metadata = {
 
   <Note
     title=""
-    description='Looking for more than just SharePoint? We’ve got you covered with our <a href="#ateam" class="text-primary no-underline hover:underline inline-flex items-center gap-1">Trusted Tech Allies <svg xmlns="http://www.w3.org/2000/svg" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-checkbox"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg></a>'
+    description='Looking for more than just SharePoint? Meet your <a href="#ateam" class="text-primary no-underline hover:underline inline-flex items-center gap-1">Trusted Tech Allies <svg xmlns="http://www.w3.org/2000/svg" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-checkbox"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg></a>'
   />
 
   <!-- ICON HERE -->
@@ -433,17 +433,17 @@ const metadata = {
       {
         title: 'Do we need SharePoint already installed?',
         description:
-          'Nope. We can help whether you’re starting from scratch or levelling up what you already have. If you don’t have SharePoint yet, we’ll guide you through picking the right plan, setting it up and tailoring it so it actually fits your needs.',
+          'Nope. Support is available whether you’re starting from scratch or levelling up what you already have. If you don’t have SharePoint yet, you will be guided through picking the right plan, setting it up and tailoring it so it actually fits your needs.',
       },
       {
         title: 'Can you work with our existing SharePoint setup?',
         description:
-          'Absolutely. We can audit, customise and optimise what you’ve already got - without derailing your day‑to‑day. Whether it’s brand new or has been gathering digital dust for years, we’ll make it work harder for you.',
+          'Absolutely. Existing environments can be audited, customised and optimised without derailing your day‑to‑day. Whether it’s brand new or has been gathering digital dust for years, SharePoint can be tuned to work harder for you.',
       },
       {
         title: 'Do you offer training for our team?',
         description:
-          'Yes. We don’t just hand over a shiny solution and walk away. We train end‑users, admins and your nominated SharePoint Champions so your team feels confident, capable and not secretly Googling “how do I use this?” after go‑live.',
+          'Yes. It’s not just about handing over a shiny solution and walking away. End‑users, admins and nominated SharePoint Champions all get training so your team feels confident, capable and not secretly Googling “how do I use this?” after go‑live.',
       },
       {
         title: 'How long does a typical SharePoint project take?',
@@ -453,7 +453,7 @@ const metadata = {
       {
         title: 'Do you offer remote consultancy?',
         description:
-          'Yes. All consultancy is delivered remotely, which means we can collaborate with you wherever you are - no travel days, no waiting around, just flexible, efficient project delivery that fits neatly into your schedule (and your timezone).',
+          'Yes. All consultancy is delivered remotely, enabling collaboration wherever you are — no travel days, no waiting around, just flexible, efficient project delivery that fits neatly into your schedule (and your timezone).',
       },
       {
         title: 'How weird is your beard?',
@@ -478,7 +478,13 @@ const metadata = {
     id="team"
     title="Behind The Beard"
     tagline="Team"
-    columns={2}
+    columns={1}
+    classes={{
+      container: 'grid place-items-center', // EDIT
+      items: {
+        panel: 'w-full max-w-xl px-6 py-12', // EDIT
+      },
+    }}
     items={[
       {
         title: 'Anthony',
@@ -491,21 +497,6 @@ const metadata = {
           { ariaLabel: 'Site', icon: 'tabler:user-square-rounded', href: 'https://anthonywithah.github.io' },
         ],
       },
-      {
-        title: 'Anna',
-        tagline: 'Design & UX Advisor',
-        description:
-          'I’m a graphic designer with a background in design and animation, which means I know how to make things look good and feel right. Besides shaping our visual style, I provide guidance on design direction, ensuring each project’s final look and feel is polished and professional.',
-        image: '/images/WEIRD-BEARD-IT-a2.jpg',
-        socialLinks: [
-          { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/annabannabee' },
-          {
-            ariaLabel: 'LinkedIn',
-            icon: 'tabler:brand-instagram',
-            href: 'https://www.instagram.com/designsbyannalouise',
-          },
-        ],
-      },
     ]}
   />
 
@@ -514,7 +505,7 @@ const metadata = {
   <Features2
     id="ateam"
     title="The MS365 A-Team"
-    subtitle="When the project calls for it, we bring in our Trusted Tech Allies - a proven network of Microsoft 365 experts who expand your capabilities without expanding your headaches. Think of it as calling in the specialists, minus the dramatic theme music."
+    subtitle="When the project calls for it, Trusted Tech Allies step in - a proven network of Microsoft 365 experts who expand your capabilities without expanding your headaches. Think of it as calling in the specialists, minus the dramatic theme music."
     tagline="TEAM"
     items={[
       {
@@ -553,7 +544,7 @@ const metadata = {
     id="contact"
     tagline="CONTACT"
     title="Let’s Talk About Your SharePoint Project"
-    subtitle="Ready to get things moving? Whether it’s a fresh build or the next big upgrade, this is where your SharePoint journey takes off. No jargon, no endless forms - just a real conversation about what you need and how we can make it happen."
+    subtitle="Ready to get things moving? Whether it’s a fresh build or the next big upgrade, this is where your SharePoint journey takes off. No jargon, no endless forms - just a real conversation about what you need and how it gets done."
     inputs={[
       { type: 'text', name: 'name', label: 'Name' },
       { type: 'text', name: 'company', label: 'Company', autocomplete: 'organization' },
