@@ -9,7 +9,7 @@ robots:
 canonical: false
 ---
 
-Last updated: October 2025
+Last updated: November 2025
 
 ## 1. Website Terms of Use
 
