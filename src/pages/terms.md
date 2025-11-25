@@ -52,7 +52,7 @@ We will provide the Services described in our written proposal or agreement. Any
 
 ### Fees & payment
 
-Fees are as stated in our proposal. Payment is due within 14 days of invoice unless otherwise agreed.
+Fees are as stated in our proposal. Payment is due within 5 business days of invoice unless otherwise agreed.
 
 ### Client responsibilities
 
