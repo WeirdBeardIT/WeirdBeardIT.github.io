@@ -70,10 +70,10 @@ export const footerData = {
         <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
       `,
     },
-    {
-      image: '/images/tp-dark.png',
-      href: 'https://www.trustpilot.com/review/weirdbeardit.com',
-    },
+  //   {
+  //     image: '/images/tp-dark.png',
+  //     href: 'https://www.trustpilot.com/review/weirdbeardit.com',
+  //   },
   ],
 
   socialLinks: [
@@ -81,6 +81,6 @@ export const footerData = {
     { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@WeirdBeardIT' },
   ],
   footNote: `
-    © 2025 Weird Beard IT Limited (Company No. 16740585). All rights reserved.
+    © 2026 Weird Beard IT Limited (Company No. 16740585). All rights reserved.
   `,
 };
